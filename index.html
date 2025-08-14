@@ -6,48 +6,120 @@
         <title>📒Study Notes</title>
 
         <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/script.js" defer></script>
     </head>
     
     <body>
         <header id="header">
-            <div id="headerLogo">
+            <div id="logo">
                 <a href="index.html">
-                    <h1>Study Notes</h1>
+                    <h1>Jovic Francis B. Rayco | 📒Study Notes</h1>
                 </a>
             </div>
 
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="pages/blogs.html">blog</a> </li>
-                    <li><a href="pages/projects.html">project</a></li>
-                    <li><a href="pages/about.html">about</a></li>
+                    <li><a class="homeLink" href="index.html">home</a></li>
+                    <li><a class="blogsLink" href="pages/blogs.html">blog</a> </li>
+                    <li><a class="projectsLink" href="pages/projects.html">project</a></li>
+                    <li><a class="aboutLink" href="pages/about.html">about</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <div id="hero"></div>
-            <div id="featured">
-                <div id="featuredProjects"></div>
-                <div id="featuredBlogs"></div>
-            </div>
+        <main id="main">
+            <aside class="side-info">
+                <img id="profile" src="" alt="Profile">
+
+                <ul class="social-links">
+                    <li><a href=""><img class="linkedIn" src="" alt="linkedIn"></a></li>
+                    <li><a href=""><img class="github-1" src="" alt="github-1"></a></li>
+                    <li><a href=""><img class="facebook" src="" alt="facebook"></a></li>
+                    <li><a href=""><img class="github-2" src="" alt="github-2"></a></li>
+                </ul>
+
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="">Github Repositories</a></li>
+                </ul>
+            </aside>
+
+            <section class="intro-section">
+                <h2>Hello there!</h2>
+                <p>I am Jovic Francis B. Rayco, a Software Developer. 
+                    I like building software, both as a way to create assitive tools, 
+                    and as well as a means to learn new things. Learning is my personal hobby.  
+                    Welcome to my projects and blog website, named Study Notes.</p>
+                <p>This portfolio and blog site may evolve and change overtime 
+                    in terms of design as I improve on my skills as a mainly back-end 
+                    developer that also works on front-end. </p>
+            </section>
+
+            <section class="featured-section">
+                <div id="featured-projects" class="featured-column">
+                    <a class="projectsLink" href="pages/projects.html">
+                        <img src="" alt="projectsLogo">
+                        <h2>Projects</h2>
+                    </a>
+                    <ol>
+                        <li>
+                            <h3>Vanilla-Kanban</h3>
+                            <p>A simple kanban board tool created with HTML, CSS, and Vanilla Javascript. Intended to...</p>
+                            <a href="">Go to Project</a>
+                        </li>
+                        <li>
+                            <h3>Passcrypt-Safe</h3>
+                            <p>A commandline based password management software that is intended to be personali...</p>
+                            <a href="">Go to Project</a>
+                        </li>
+                        <li>
+                            <h3>Random Generator</h3>
+                            <p>A random number generator object tool  with React JS. Users... </p>
+                            <a href="">Go to Project</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="featured-blogs">
+                    <a class="blogsLink" href="pages/blogs.html">
+                        <img src="" alt="blogsLogo">
+                        <h2>Blogs</h2>
+                    </a>
+                    <ol>
+                        <li>
+                            <h3>AI-Driven Pipeline Development</h3>
+                            <p>In my team's thesis project called Next-Gen QA, we develo...</p>
+                            <a href="">Read more</a>
+                        </li>
+                        <li>
+                            <h3>Python  and AI</h3>
+                            <p>Python is often brought up when AI is taught at school, and for good reason. Here are some...</p>
+                            <a href="">Read more</a>
+                        </li>
+                        <li>
+                            <h3>Trying out MongoDB</h3>
+                            <p>I had some exposure with PostgreSQL during OJT...</p>
+                            <a href="">Read more</a>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
         </main>
 
-        <footer>
-            <small>
-                Study Notes 2025
-            </small> <br>
-            <small>
-                HTML, CSS, Vanilla Javascript
-            </small>
-            <ul id="footerExternalLinks">
-                <li><a href="https://github.com/">Github</a></li>
-                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-                <li><a href="https://facebook.com">Facebook</a></li>
-            </ul>
+        <footer id="footer">
+            <h6>📒 Jovic Francis B. Rayco | Study Notes Portfolio</h6>
+            <h6>Static website made with html, css, and vanilla javascript</h6>
+            <aside>
+                <ul class="social-links">
+                    <li><a href=""><img class="linkedIn" src="" alt="linkedIn"></a></li>
+                    <li><a href=""><img class="github-1" src="" alt="github-1"></a></li>
+                    <li><a href=""><img class="facebook" src="" alt="facebook"></a></li>
+                    <li><a href=""><img class="github-2" src="" alt="github-2"></a></li>
+                </ul>
+            </aside>
         </footer>
-        
     </body>
 
 </html>
