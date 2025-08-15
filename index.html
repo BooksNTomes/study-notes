@@ -10,26 +10,26 @@
     </head>
     
     <body>
-        <header id="header">
-            <div id="logo">
-                <a href="index.html">
+        <header>
+            <div class="header-container">
+                <a id="logo" href="index.html">
                     <h1><span>Jovic Francis B. Rayco</span> | 📒Study Notes</h1>
                 </a>
-            </div>
 
-            <nav id="nav">
-                <ul>
-                    <li><a class="homeLink" href="index.html">Home</a></li>
-                    <li><a class="projectsLink" href="pages/projects.html">Projects</a></li>
-                    <li><a class="blogsLink" href="pages/blogs.html">Blogs</a> </li>
-                    <li><a class="aboutLink" href="pages/about.html">About</a></li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li><a class="homeLink" href="index.html">Home</a></li>
+                        <li><a class="projectsLink" href="pages/projects.html">Projects</a></li>
+                        <li><a class="blogsLink" href="pages/blogs.html">Blogs</a> </li>
+                        <li><a class="aboutLink" href="pages/about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <div id="bodyDiv">
-            <main id="main">
-                <section class="intro-section">
+        <div class="main-aside-container">
+            <main>
+                <section class="hero-section"> <!-- Current Implementation: Text-based -->
                     <h2>Hello there!</h2>
                     <p>I am Jovic Francis B. Rayco, a Software Developer. 
                         I like building software, both as a way to create assitive tools, 
@@ -41,7 +41,7 @@
                 </section>
 
                 <section class="featured-section">
-                    <div id="featured-projects" class="featured-column">
+                    <div class="featured-column">
                         <a class="projectsLink" href="pages/projects.html">
                             <img src="data/Hamburger-Logo2.png" alt="projectsLogo">
                             <h2>Projects</h2>
@@ -65,7 +65,7 @@
                         </ol>
                     </div>
 
-                    <div id="featured-blogs" class="featured-column">
+                    <div class="featured-column">
                         <a class="blogsLink" href="pages/blogs.html">
                             <img src="data/Hamburger-Logo.png" alt="blogsLogo">
                             <h2>Blogs</h2>
@@ -91,7 +91,7 @@
                 </section>
             </main>
             <aside class="side-info">
-                <img id="profile" src="" alt="Profile">
+                <img id="profile" src="data/profile.jpg" alt="Profile">
 
                 <ul class="social-links">
                     <li><a href=""><img class="linkedIn" src="" alt="linkedIn"></a></li>
@@ -108,19 +108,20 @@
                 </ul>
             </aside>
         </div>
-        
 
-        <footer id="footer">
-            <div>
-                <h6>📒 Jovic Francis B. Rayco | Study Notes Portfolio</h6>
-                <h6>Static website made with html, css, and vanilla javascript</h6>
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h6>📒 Jovic Francis B. Rayco | Study Notes Portfolio</h6>
+                    <h6>Static website made with html, css, and vanilla javascript</h6>
+                </div>
+                <ul class="footer-social-links">
+                    <li><a href=""><img class="linkedIn" src="" alt="linkedIn"></a></li>
+                    <li><a href=""><img class="github-1" src="" alt="github-1"></a></li>
+                    <li><a href=""><img class="facebook" src="" alt="facebook"></a></li>
+                    <li><a href=""><img class="github-2" src="" alt="github-2"></a></li>
+                </ul>
             </div>
-            <ul class="social-links">
-                <li><a href=""><img class="linkedIn" src="" alt="linkedIn"></a></li>
-                <li><a href=""><img class="github-1" src="" alt="github-1"></a></li>
-                <li><a href=""><img class="facebook" src="" alt="facebook"></a></li>
-                <li><a href=""><img class="github-2" src="" alt="github-2"></a></li>
-            </ul>
         </footer>
     </body>
 
