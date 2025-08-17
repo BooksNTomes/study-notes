@@ -191,3 +191,52 @@ aside h2{
 .quick-links:hover{
     color: hsl(12, 100%, 73%);
 }
+/* Featured Projects / Blogs */
+.featured-project, .featured-blog {
+    display:flex;
+}
+.featured-project img, .featured-blog img {
+    min-width:50%;
+    max-width:50%;
+}
+.featured-content{
+    text-align:right;
+}
+.featured-content h3, .featured-content h4, .featured-content p {
+    text-align:left;
+}
+#featured-blogs-hero, #featured-projects-hero{
+    position:relative;
+}
+#left-arrow, #right-arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+#right-arrow{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* */
+#tech-stack{
+    display:flex;
+    gap:4rem;
+}
+.techlist-col ul{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+.techlist-col li {
+    width:100px;
+    height:75px;
+    border:1px solid black;
+}
