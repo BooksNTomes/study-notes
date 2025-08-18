@@ -194,11 +194,11 @@ aside h2{
     color: hsl(12, 100%, 73%);
 }
 /* Featured Projects / Blogs */
-.featured-project, .featured-blog {
+.featured-project, .featured-blog, .featured-slide {
     padding:16px;
     display:flex;
 }
-.featured-project img, .featured-blog img {
+.featured-project img, .featured-blog img, .featured-slide img {
     min-width:50%;
     max-width:50%;
     /* box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.2); */
