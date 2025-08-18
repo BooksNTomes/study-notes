@@ -45,6 +45,7 @@ header{
     box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.2);
     position:sticky;
     top:0;
+    z-index:5;
 }
 .header-container{
     width:60%;
@@ -206,9 +207,11 @@ aside h2{
     text-align:left;
 }
 #featured-blogs-hero, #featured-projects-hero{
+    z-index:2;
     position:relative;
 }
 #left-arrow, #right-arrow{
+    z-index:2;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -239,4 +242,24 @@ aside h2{
     width:100px;
     height:75px;
     border:1px solid black;
+}
+/* */
+#projects-section, #blogs-section{
+    margin-top:2rem;
+    display:flex;
+    flex-wrap: wrap;
+    gap:5rem;
+}
+#projects-section h3, #blogs-section h3 {
+    color: hsl(12, 100%, 73%);
+}
+#projects-section a, #blogs-section a {
+    color: hsl(12, 44%, 50%);
+    text-decoration: underline;
+}
+#project-genre ul, #blogs-section ul{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    flex-wrap:wrap;
 }
