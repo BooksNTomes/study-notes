@@ -267,9 +267,16 @@ aside h2{
 }
 
 /* */
+.stack-section{
+    padding:1rem;
+    border: 4px solid hsl(12, 44%, 50%);
+    box-shadow: 4px 4px 0px black;
+}
 #tech-stack{
+    padding: 1rem;
     display:flex;
-    gap:4rem;
+    flex-wrap: wrap;
+    gap:3rem;
 }
 .techlist-col ul{
     display:flex;
@@ -277,9 +284,21 @@ aside h2{
     gap:2rem;
 }
 .techlist-col li {
+    padding: 0.1rem;
+    background-color:#FFEAD3;
+    border: 2px solid hsl(12, 44%, 50%);
+    box-shadow: 4px 4px 0px black;
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
     width:100px;
     height:75px;
-    border:1px solid black;
+    /* border:1px solid black; */
+}
+.techlist-col li p {
+    color: hsl(12, 44%, 50%);
+    text-shadow:none;
+    font-weight: bold;
 }
 /* */
 #projects-section, #blogs-section{
