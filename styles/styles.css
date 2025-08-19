@@ -8,23 +8,45 @@
 :root {
     background-image: url("../data/background.png");
 }
+/* Colors : use var(--name)*/
+:root {
+    --default-white: hsl(44, 100%, 96%);
+    --alternate-white: hsl(31, 100%, 91%);
+    --default-black: hsl(4, 27%, 20%);
+    --header-footer-dark: hsl(4, 27%, 20%);
+    --border-dark: hsl(12, 44%, 40%);
+    --sect-header-bright: hsl(12, 100%, 73%);
+    --link-emphasis: hsl(12, 44%, 50%);
+    --link-hover-bright: hsl(12, 100%, 73%);
+    --link-hover-dark: hsl(12, 44%, 40%);
+    --emphasis-white: white;
+ 
+    --shadow-text: hsla(0, 0%, 0%, 0.05);
+    --shadow-box: hsla(0, 0%, 0%, 0.20);
+    --shadow-block: black;
+
+    --transparent-arrow: hsla(4, 27%, 20%, 0.5);
+    --visible-arrow: hsl(4, 27%, 20%);
+
+    --overlay: hsla(0, 0%, 0%, 0.80);
+}
+
 /* Body */
 body{
-    color: #FFEAD3;
-    background-color: hsla(0, 0%, 0%, 0.80);
+    background-color: var(--overlay);
 }
 /* Texts */
 h1, h2, h3, h4, h5, h6, p, a, img {
     font-family: sans-serif;
     text-decoration: none;
-    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.25);
+    text-shadow: 2px 2px 2px var(--shadow-text);
 
     margin: 0rem 0rem 1rem;
-    color: #FFEAD3;
+    color: var(--default-white);
 }
 h2 {
     font-size:28px;
-    color: hsl(12, 100%, 73%)
+    color: var(--sect-header-bright);
 }
 p {
     line-height: 2;
@@ -36,14 +58,14 @@ ul, li, ol {
 /*--------------------------------------------------*/
 /* Header */
 header{
-    background-color: hsl(4, 27%, 20%);
+    background-color: var(--header-footer-dark);
     margin:0;
     width:100vw;
     
     grid-area: h;
     padding: 0.5rem 0rem 0rem;
 
-    box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0px 4px 4px var(--shadow-box);
     position:sticky;
     top:0;
     z-index:5;
@@ -61,7 +83,7 @@ header{
     margin:0;
 }
 #logo span {
-    color: hsl(12, 100%, 73%);
+    color: var(--sect-header-bright);
 }
 nav ul{
     display:flex;
@@ -75,8 +97,8 @@ nav a {
 /*--------------------------------------------------*/
 /* Footer */
 footer{
-    background-color: hsl(4, 27%, 20%);
-    box-shadow: 0px -4px 4px hsla(0, 0%, 0%, 0.2);
+    background-color: var(--header-footer-dark);
+    box-shadow: 0px -4px 4px var(--shadow-box);
 }
 .footer-container{
     width:60%;
@@ -122,31 +144,31 @@ section {
     overflow:scroll;
     scrollbar-width: none; /* Take note other browser implementations*/
     height:500px;
-    border: 8px solid hsl(12, 44%, 50%);
-    box-shadow: 4px 4px black;
-    background-color: hsl(44, 100%, 96%);
+    border: 8px solid var(--link-emphasis);
+    box-shadow: 4px 4px var(--shadow-block);
+    background-color: var(--default-white);
 }
 .featured-section li {
-    background-color: hsl(44, 100%, 96%);
+    background-color: var(--default-white);
     padding: 1rem;
     margin: 0rem 0rem 1rem;
-    box-shadow: 0px 0px 16px hsla(0, 0%, 0%, 0.25);
+    box-shadow: 0px 0px 16px var(--shadow-box);
     text-align-last:right;
 }
 .featured-section li:hover {
-    background-color: hsl(31, 100%, 91%);
+    background-color: var(--alternate-white);
     padding: 1rem;
     margin: 0rem 0rem 1rem;
-    box-shadow: 0px 0px 16px hsla(0, 0%, 0%, 0.25);
+    box-shadow: 0px 0px 16px var(--shadow-box);
     text-align-last:right;
 }
 .featured-section li:last-child{
     margin:0;
 }
 .featured-section li h2, .featured-section li p {
-    text-shadow: 4px 4px 4px hsla(0, 0%, 0%, 0.1);
+    text-shadow: 4px 4px 4px var(--shadow-text);
     text-align-last:left;
-    color: hsl(4, 28%, 21%);
+    color: var(--default-black);
     font-size:14px;
 }
 .featured-section li h2{
@@ -154,7 +176,7 @@ section {
 }
 .see-more-link{
     text-decoration: underline;
-    text-shadow: 4px 4px 4px hsla(0, 0%, 0%, 0.1);
+    text-shadow: 4px 4px 4px var(--shadow-text);
     color:hsl(12, 44%, 50%);
 }
 .featured-column{
@@ -171,7 +193,7 @@ aside{
     margin-bottom:1rem;
     width: 194px;
     height: 194px;
-    box-shadow: 4px 4px 4px hsla(0, 0%, 0%, 0.20);
+    box-shadow: 4px 4px 4px var(--shadow-box);
 }
 .social-links{
     display:flex;
@@ -188,10 +210,10 @@ aside h2{
     text-align: right;
     margin-bottom:1rem;
     text-decoration:underline;
-    color: hsl(12, 44%, 50%);
+    color: var(--link-emphasis)
 }
 .quick-links:hover{
-    color: hsl(12, 100%, 73%);
+    color: var(--link-hover-bright);
 }
 /* Featured Projects / Blogs */
 .featured-project, .featured-blog, .featured-slide {
@@ -208,7 +230,7 @@ aside h2{
     /* text-align:right; */
 }
 .featured-content h3, .featured-content h4, .featured-content p {
-    color: hsl(4, 27%, 20%);
+    color: var(--default-black)
 }
 .featured-content a{
     border:none;
@@ -216,19 +238,19 @@ aside h2{
     padding:8px 12px;
     font-size:16px;
     font-weight:bold;
-    background-color: hsl(12, 44%, 50%);
-    box-shadow: 4px 4px 4px hsla(0, 0%, 0%, 0.2);
+    background-color: var(--link-emphasis);
+    box-shadow: 4px 4px 4px var(--shadow-box);
 }
 .featured-content a:hover{
     transition: 0.3s ease;
-    background-color: hsl(12, 44%, 40%);
+    background-color: var(--link-hover-dark);
 }
 #featured-blogs-hero, #featured-projects-hero{
     z-index:2;
     position:relative;
-    border:4px solid hsl(12, 44%, 40%);
-    box-shadow:4px 4px 0px black;
-    background-color: #FFEAD3;
+    border:4px solid var(--border-dark);
+    box-shadow:4px 4px 0px var(--shadow-block);
+    background-color: var(--alternate-white);
 }
 #left-arrow, #right-arrow{
     z-index:2;
@@ -253,13 +275,13 @@ aside h2{
 	cursor: pointer;
 	outline: inherit;
     font-weight:bold;
-    color:hsla(4, 27%, 20%, 0.5);
+    color:var(--transparent-arrow);
     font-size:32px;
 }
 #left-arrow:hover, #right-arrow:hover{
     color:hsl(4, 27%, 20%);
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);;
+    box-shadow: 0px 0px 4px var(--shadow-box);
 }
 #right-arrow{
     right: 0;
@@ -269,8 +291,8 @@ aside h2{
 /* */
 .stack-section{
     padding:1rem;
-    border: 4px solid hsl(12, 44%, 50%);
-    box-shadow: 4px 4px 0px black;
+    border: 4px solid var(--border-dark);
+    box-shadow: 4px 4px 0px var(--shadow-block);
 }
 #tech-stack{
     padding: 1rem;
@@ -285,18 +307,17 @@ aside h2{
 }
 .techlist-col li {
     padding: 0.1rem;
-    background-color:#FFEAD3;
-    border: 2px solid hsl(12, 44%, 50%);
-    box-shadow: 4px 4px 0px black;
+    background-color: var(--default-white);
+    border: 1px solid var(--border-dark) ;
+    box-shadow: 4px 4px 0px var(--shadow-block);
     display:flex;
     flex-wrap:wrap;
     align-items: center;
     width:100px;
     height:75px;
-    /* border:1px solid black; */
 }
 .techlist-col li p {
-    color: hsl(12, 44%, 50%);
+    color: var(--link-emphasis);
     text-shadow:none;
     font-weight: bold;
 }
@@ -308,11 +329,14 @@ aside h2{
     gap:5rem;
 }
 #projects-section h3, #blogs-section h3 {
-    color: hsl(12, 100%, 73%);
+    color: var(--sect-header-bright);
 }
 #projects-section a, #blogs-section a {
-    color: hsl(12, 44%, 50%);
+    color: var(--link-emphasis);
     text-decoration: underline;
+}
+#projects-section a:hover, #blogs-section a:hover {
+    color: var(--link-hover-bright);
 }
 #project-genre ul, #blogs-section ul{
     display:flex;
@@ -327,7 +351,7 @@ aside h2{
 }
 
 .github-2 {
-    color: #b85e47;
+    color: var(--alternate-white);
 }
 
 .footer-social-links .linkedIn, .footer-social-links .github-1, .footer-social-links .facebook, .footer-social-links .github-2 {
