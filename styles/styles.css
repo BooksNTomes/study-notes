@@ -84,7 +84,7 @@ footer{
     margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 footer ul{
     display:flex;
@@ -319,4 +319,18 @@ aside h2{
     flex-direction:column;
     gap:1rem;
     flex-wrap:wrap;
+}
+/* */
+.linkedIn, .github-1, .facebook, .github-2 {
+    width: 48px;
+    height: 48px;
+}
+
+.github-2 {
+    color: #b85e47;
+}
+
+.footer-social-links .linkedIn, .footer-social-links .github-1, .footer-social-links .facebook, .footer-social-links .github-2 {
+    width: 24px;
+    height: 24px;
 }
