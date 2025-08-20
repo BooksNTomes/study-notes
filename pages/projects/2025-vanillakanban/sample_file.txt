@@ -1,0 +1,1 @@
+folder with identical filename to the html blog/project will contain images/needed data

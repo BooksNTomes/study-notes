@@ -6,7 +6,7 @@
 }
 /* Background Image */
 :root {
-    background-image: url("../data/background.png");
+    background-image: url("../site-images/background.png");
 }
 /* Colors : use var(--name)*/
 :root {
