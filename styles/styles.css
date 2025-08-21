@@ -10,8 +10,8 @@
 }
 /* Colors : use var(--name)*/
 :root {
-    --default-white: hsl(44, 100%, 96%);
-    --alternate-white: hsl(31, 100%, 91%);
+    --default-white: hsl(44, 100%, 96%); /**/
+    --alternate-white: hsl(31, 100%, 91%); /**/
     --default-black: hsl(4, 27%, 20%);
     --header-footer-dark: hsl(4, 27%, 20%);
     --border-dark: hsl(12, 44%, 40%);
@@ -28,7 +28,10 @@
     --transparent-arrow: hsla(4, 27%, 20%, 0.5);
     --visible-arrow: hsl(4, 27%, 20%);
 
-    --overlay: hsla(0, 0%, 0%, 0.80);
+    --overlay: hsla(0, 0%, 0%, 0.85);
+
+    --docsize-default: 1000px;
+    --docsize-dynamic: 100%;
 }
 
 /* Body */
@@ -48,8 +51,13 @@ h2 {
     font-size:28px;
     color: var(--sect-header-bright);
 }
+h6 {
+    font-size: 12px;
+    margin: 0.5rem 0rem 0.5rem;
+}
 p {
-    line-height: 2;
+    font-size:16px;
+    line-height: 2.5    ;
 }
 /* Lists */
 ul, li, ol {
@@ -58,20 +66,17 @@ ul, li, ol {
 /*--------------------------------------------------*/
 /* Header */
 header{
-    background-color: var(--header-footer-dark);
     margin:0;
-    width:100vw;
-    
-    grid-area: h;
     padding: 0.5rem 0rem 0rem;
-
-    box-shadow: 0px 4px 4px var(--shadow-box);
+    width:100vw;
     position:sticky;
     top:0;
     z-index:5;
+    background-color: var(--header-footer-dark);
+    box-shadow: 0px 4px 4px var(--shadow-box);
 }
 .header-container{
-    width:60%;
+    width:var(--docsize-default);
     margin:auto;
     display: flex;
     align-items: baseline;
@@ -82,17 +87,25 @@ header{
     font-size:28px;
     margin:0;
 }
+#logo h1:hover {
+    color:var(--alternate-white);
+}
 #logo span {
     color: var(--sect-header-bright);
 }
 nav ul{
     display:flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     gap:2rem;
 }
 nav a {
     font-size: 18px;
+    text-shadow: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color:var(--alternate-white);
+    text-shadow: var(--shadow-text);
 }
 /*--------------------------------------------------*/
 /* Footer */
@@ -101,8 +114,7 @@ footer{
     box-shadow: 0px -4px 4px var(--shadow-box);
 }
 .footer-container{
-    width:60%;
-
+    width:var(--docsize-default);
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -118,7 +130,7 @@ footer ul{
 .main-aside-container{
     padding-top:3rem;
     padding-bottom:3rem;
-    width:60%;
+    width:var(--docsize-default);
     margin:auto;
     display:flex;
     gap:5rem;
