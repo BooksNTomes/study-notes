@@ -113,6 +113,11 @@ nav a:hover {
 footer{
     background-color: var(--header-footer-dark);
     box-shadow: 0px -4px 4px var(--shadow-box);
+    width:100%;
+    /* position:fixed;
+    left:0;
+    bottom: 0;
+    z-index:5; */
 }
 .footer-container{
     width:var(--docsize-default);
@@ -152,6 +157,10 @@ section {
     display: flex;
     align-items: center;
     margin-bottom: 0;
+}
+.projectsLink img, .blogsLink img {
+    width:36px;
+    height:36px;
 }
 .featured-section ol{
     overflow:scroll;
@@ -200,6 +209,9 @@ section {
 aside{
     width:210px;
 }
+.alinks{
+    text-align: center;
+}
 #profile{
     display:flex;
     margin:auto;
@@ -217,15 +229,17 @@ aside{
     width:216px;
 }
 aside h2{
-    text-align:left;
+    text-align:center;
 }
 .quick-links{
-    text-align: right;
+    text-align: center;
+}
+.quick-links a{
     margin-bottom:1rem;
     text-decoration:underline;
     color: var(--link-emphasis)
 }
-.quick-links:hover{
+.quick-links a:hover{
     color: var(--link-hover-bright);
 }
 /* Featured Projects / Blogs */
@@ -396,16 +410,26 @@ aside h2{
         align-items:center;
         flex-direction:column;
     }
-    /* main{
-        order:1;
+
+    main{
+        order:2;
     }
     aside{
-        order:2;
-        text-align:center;
+        width:80%;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        order:1;
     }
-    aside h2{
-        text-align:center;
-    } */
+    #profile{
+        margin:1rem;
+    }
+    .social-links{
+        /* width:auto; */
+        padding: 1rem;
+        margin-bottom:0;
+    }
+
 
     footer{
         padding: 1rem 0rem 1rem;
@@ -416,5 +440,14 @@ aside h2{
         text-align:center;
         align-items:center;
         flex-direction:column;
+    }
+}
+@media all and (width <= 600px){
+    aside{
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        order:1;
     }
 }
