@@ -173,7 +173,7 @@ section {
     padding: 1rem;
     margin: 0rem 0rem 1rem;
     box-shadow: 0px 0px 16px var(--shadow-box);
-    text-align-last:right;
+    /* text-align-last:right; */
 }
 .featured-section li:last-child{
     margin:0;
