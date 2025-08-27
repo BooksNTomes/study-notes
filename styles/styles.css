@@ -385,12 +385,14 @@ aside h2{
     .header-container{
         text-align:center;
         width: 90%;
+        min-width:365px;
         align-items: center;
         flex-direction:column;
     }
 
     .main-aside-container{
         width:90%;
+        min-width:365px;
         align-items:center;
         flex-direction:column;
     }
@@ -410,6 +412,7 @@ aside h2{
     }
     .footer-container{
         width:90%;
+        min-width:365px;
         text-align:center;
         align-items:center;
         flex-direction:column;
