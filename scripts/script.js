@@ -2,7 +2,12 @@ let slideIndex = 1;
 let slideDiv = "featured-slide";
 let slideDisplay = "flex";
 
-showSlides(slideIndex);
+try{
+    showSlides(slideIndex);
+}
+catch (err){
+    //do nothing
+}
 
 // Next/previous controls
 function plusSlides(n) {
