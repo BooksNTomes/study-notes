@@ -9,9 +9,39 @@
     background-image: url("../site-images/background.png");
 }
 /* Colors : use var(--name)*/
+/* Adjustment Attempt */
+/* :root {
+    --default-white: hsl(60, 100%, 98%);
+    --alternate-white: hsl(30, 100%, 92%);
+
+    --default-black: hsl(5, 32%, 14%);
+    --header-footer-dark: hsl(340, 21%, 14%);
+    --border-dark: hsl(7, 49%, 33%);
+    --sect-header-bright: hsl(12, 100%, 73%);
+    --link-emphasis: hsl(12, 44%, 50%);
+    --link-hover-bright: hsl(12, 100%, 73%);
+    --link-hover-dark: hsl(12, 44%, 40%);
+    --emphasis-white: white;
+ 
+    --shadow-text: hsla(0, 0%, 0%, 0.05);
+    --shadow-box: hsla(0, 0%, 0%, 0.20);
+    --shadow-block: black;
+
+    --transparent-arrow: hsla(4, 27%, 20%, 0.05);
+    --visible-arrow: hsl(4, 27%, 20%);
+
+    --overlay: hsla(0, 0%, 0%, .90);
+
+    --docsize-default: 1000px;
+    --docsize-dynamic: 100%;
+} */
+
+/* Original */
 :root {
-    --default-white: hsl(44, 100%, 96%); /**/
-    --alternate-white: hsl(31, 100%, 91%); /**/
+
+    --default-white: hsl(44, 100%, 96%);
+    --alternate-white: hsl(31, 100%, 91%);
+
     --default-black: hsl(4, 27%, 20%);
     --header-footer-dark: hsl(4, 27%, 20%);
     --border-dark: hsl(12, 44%, 40%);
@@ -174,7 +204,8 @@ section {
     overflow:scroll;
     scrollbar-width: none; /* Take note other browser implementations*/
     height:500px;
-    border: 8px solid var(--link-emphasis);
+    /* border: 8px solid var(--link-emphasis); */
+    border: 8px solid var(--border-dark);
     box-shadow: 4px 4px var(--shadow-block);
     background-color: var(--default-white);
 }
