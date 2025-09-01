@@ -1,3 +1,4 @@
+// Slide Script: Slightly modified sample slides code from W3Schools
 let slideIndex = 1;
 let slideDiv = "featured-slide";
 let slideDisplay = "flex";
@@ -33,5 +34,5 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {                       //; set display = none to all
         slides[i].style.display = "none";
     }
-    slides[slideIndex-1].style.display = slideDisplay;               //; set display block to the slide index
+    slides[slideIndex-1].style.display = slideDisplay;          //; set display block to the slide index
 } 
