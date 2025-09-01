@@ -289,7 +289,9 @@ aside h2{
 .featured-project img, .featured-blog img, .featured-slide img {
     min-width:50%;
     max-width:50%;
-    /* box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 0px 8px var(--shadow-box);
+    margin-bottom:0;
+    object-fit: cover;
 }
 .featured-content{
     text-align:left;
@@ -432,6 +434,21 @@ aside h2{
 
 .github-2 {
     color: var(--alternate-white);
+}
+
+.picture-section {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.picture-section img{
+    width:80%;
+    height:80%;
+}
+.picture-section img:hover{
+    width:200%;
+    height:200%;
+    box-shadow: 0px 0px 12px var(--shadow-box);
 }
 
 .footer-social-links .linkedIn, .footer-social-links .github-1, .footer-social-links .facebook, .footer-social-links .github-2 {
