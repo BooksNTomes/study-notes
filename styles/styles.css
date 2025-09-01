@@ -391,12 +391,16 @@ aside h2{
     /* min-width:100px; */
     /* max-width:150px; */
     /* height:75px; */
+    text-align:center;
 }
 .techlist-col li p {
     color: var(--link-emphasis);
     text-align:center;
     text-shadow:none;
     font-weight: bold;
+}
+.techlist-col li svg {
+    padding:5px;
 }
 .techlist-col svg{
     color:var(--link-emphasis);
