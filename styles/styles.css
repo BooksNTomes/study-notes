@@ -528,4 +528,10 @@ aside h2{
         align-items: center;
         order:1;
     }
+
+    .featured-content a {
+        font-size:14px;
+        width:80%;
+        height:80%;
+    }
 }
