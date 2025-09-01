@@ -9,33 +9,6 @@
     background-image: url("../site-images/background.png");
 }
 /* Colors : use var(--name)*/
-/* Adjustment Attempt */
-/* :root {
-    --default-white: hsl(60, 100%, 98%);
-    --alternate-white: hsl(30, 100%, 92%);
-
-    --default-black: hsl(5, 32%, 14%);
-    --header-footer-dark: hsl(340, 21%, 14%);
-    --border-dark: hsl(7, 49%, 33%);
-    --sect-header-bright: hsl(12, 100%, 73%);
-    --link-emphasis: hsl(12, 44%, 50%);
-    --link-hover-bright: hsl(12, 100%, 73%);
-    --link-hover-dark: hsl(12, 44%, 40%);
-    --emphasis-white: white;
- 
-    --shadow-text: hsla(0, 0%, 0%, 0.05);
-    --shadow-box: hsla(0, 0%, 0%, 0.20);
-    --shadow-block: black;
-
-    --transparent-arrow: hsla(4, 27%, 20%, 0.05);
-    --visible-arrow: hsl(4, 27%, 20%);
-
-    --overlay: hsla(0, 0%, 0%, .90);
-
-    --docsize-default: 1000px;
-    --docsize-dynamic: 100%;
-} */
-
 /* Original */
 :root {
 
@@ -454,10 +427,21 @@ aside h2{
     height:200%;
     box-shadow: 0px 0px 12px var(--shadow-box);
 }
+.picture-section-no-resize img{
+    width:80%;
+    height:80%;
+}
 
 .footer-social-links .linkedIn, .footer-social-links .github-1, .footer-social-links .facebook, .footer-social-links .github-2 {
     width: 24px;
     height: 24px;
+}
+.date-details p{
+    font-size:12px;
+    margin:0px;
+}
+.credits-section li{
+    margin-left:1rem;
 }
 
 /* Dynamic */
@@ -478,10 +462,14 @@ aside h2{
         min-width:365px;
         align-items:center;
         flex-direction:column;
+        padding-bottom:10rem;
     }
 
     main{
         order:2;
+    }
+    .main-1{
+        order:1;
     }
     aside{
         width:80%;
@@ -489,6 +477,11 @@ aside h2{
         align-items: center;
         justify-content: space-around;
         order:1;
+    }
+    .aside-2{
+        order:2;
+        justify-content: center;
+        flex-direction: column;
     }
     #profile{
         margin:1rem;
@@ -499,16 +492,23 @@ aside h2{
         margin-bottom:0;
     }
 
+    .picture-section img:hover{
+        box-shadow: 0px 0px 12px var(--shadow-box);
+        width:80%;
+        height:80%;
+    }
+
 
     footer{
         padding: 1rem 0rem 1rem;
+        position:relative;
     }
     .footer-container{
         width:90%;
         min-width:365px;
-        text-align:center;
-        align-items:center;
-        flex-direction:column;
+        /* text-align:center; */
+        /* align-items:center; */
+        /* flex-direction:column; */
     }
 }
 @media all and (width <= 600px){
