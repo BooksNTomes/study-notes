@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../site-images/favicon.ico">
-    <title>Study Notes | Vanilla-Kanban</title>
+    <title>Study Notes | Next-Gen QA</title>
 
     <link rel="stylesheet" href="../../styles/styles.css">
     <script src="../../scripts/script.js" defer></script>
@@ -12,13 +12,13 @@
 <body>
     <header>
         <div class="header-container">
-            <a id="logo" href="../../index.html">
+            <a id="logo" href="../../../index.html">
                 <h1><span>Jovic Francis B. Rayco</span> | 📒Study Notes</h1>
             </a>
 
             <nav>
                 <ul>
-                    <li><a class="homeLink" href="../../index.html">Home</a></li>
+                    <li><a class="homeLink" href="../../../index.html">Home</a></li>
                     <li><a class="projectsLink" href="../projects.html">Projects</a></li>
                     <li><a class="blogsLink" href="../blogs.html">Blogs</a> </li>
                     <li><a class="aboutLink" href="../about.html">About</a></li>
@@ -30,60 +30,44 @@
     <div class="main-aside-container">
         <main class="main-1">
             <section class="hero-section">
-                <h2>Vanilla Kanban</h2>
-                <p>A simple kanban-board program made with vanilla Javascript, built with the intention to make it configurable / expandable 
-                    in terms of features. I intend to use this project as a learning ground for mastering Vanilla Javascript and 
-                    understand its limitations compared to using Node.js and the industry standard frameworks.</p>
+                <h2>Next-Gen QA</h2>
+                <p>The full title of the undergraduate research for this project is "Next-Gen Website QA: Automated Functional Test Case Creation Using Large Language Models, Prompt Engineering, and Scraping Technologies". This was my group's thesis during our fourth year in college and it is related to artificial intelligence and quality assurance. The project files are not public, but I can talk about the features in terms of concepts.</p>
+                <p>This was meant to assist quality assurance devs or experts in creating test cases, by providing a good scaffold of automatically built test cases ready for manual testing. We were able to create a prototype that worked well, but we chose to make the repository private for now.</p>
+                <p>For the model, we used a fine-tuned Llama3.1 using Unsloth for training and Ollama for the local Llama3.1 model and patched it with the use of a Modelfile.</p>
             </section>
 
             <section class="features-section">
                 <h2>Features</h2>
-                <p>Currently, it achieves the basic functions of a kanban board for an individual's personal use:</p>
+                <!-- <p></p> -->
                 <ul>
-                    <li><p>- An empty default board is loaded upon opening.</p></li>
-                    <li><p>- You can create sections.</p></li>
-                    <li><p>- For each section, you can create a task.</p></li>
-                    <li><p>- You can configure the names of created boards/sections/tasks.</p></li>
-                    <li><p>- You can save and open boards, they are saved / opened as .json files.</p></li>
+                    <li><p>- Scrapes basic interface data (such as headers, buttons, paragraphs) using Selenium</p></li>
+                    <li><p>- Creates prompts using the scraped data</p></li>
+                    <li><p>- Generates website functional test cases using the prompts</p></li>
+                    <li><p>- Outputs a .csv or pdf file containing the test case data.</p></li>
                 </ul>
-            </section>
-
-            <section class="installation-section">
-                <h2>Installation</h2>
-                <ol>
-                    <li><p>1. Download the  project through the Github repository</p></li>
-                    <li><p>2. Extract files</p></li>
-                    <li><p>3. Open the index.html file.</p></li>
-                    <li><p>4. Remember to save your kanban board as a json file before closing to avoid losing progress.</p></li>
-                </ol>
             </section>
 
             <section class="credits-section">
                 <h2>Credits</h2>
-                <p>Thanks to the following references that helped as basis during development:</p>
+                <p>I'll keep it broad, for some it is for privacy purposes:</p>
                 <ul>
-                   <li><a target="_blank" class="link-underline" href="https://www.youtube.com/watch?v=ecKw7FfikwI">kanban board drag-and-drop tutorial</a></li> 
-                   <li><a target="_blank" class="link-underline" href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><p>- My groupmates</p></li>
+                    <li><p>- The testers of the project</p></li>
+                    <li><p>- Numerous references and learning resources on Django, Ollama, Unsloth, and other libraries/tech</p></li>
+                    <li><p>- Related Research Studies</p></li>
+                    <li><p>- Some suggestions from Copilot (and doing a lot of cross-checking)</p></li>
                 </ul>
             </section>
-        </main>
 
+        </main>
         <aside class="side-info aside-2">
             <section class="picture-section">
                 <h2>Screenshots</h2>
-                <img src="2025-vanillakanban/Opening Screen.png" alt="img">
-                <img src="2025-vanillakanban/Wide View.png" alt="img">
-                <img src="2025-vanillakanban/Editing Task.png" alt="img">
-                <img src="2025-vanillakanban/Editing Section.png" alt="img">
+                <img src="2025-nextgen_qa/Home.png" alt="img">
+                <img src="2025-nextgen_qa/About Fixed.png" alt="img">
+                <img src="2025-nextgen_qa/Overview CSV.png" alt="img">
+                <img src="2025-nextgen_qa/Results.png" alt="img">
             </section>
-
-            <div class="alinks">
-                <h2>Repository Link</h2>
-                <ul class="quick-links">
-                    <!-- <li><a class="quick-links" href="">Zip File</a></li> -->
-                    <li><a target="_blank"href="https://github.com/BooksNTomes/vanilla-kanban">Github Repository</a></li><br>
-                </ul>
-            </div>
         </aside>
     </div>
 

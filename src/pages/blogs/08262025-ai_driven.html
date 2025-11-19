@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../site-images/favicon.ico">
-    <title>Study Notes | On Random Numbers</title>
+    <title>Study Notes | AI-Driven Pipeline Development</title>
 
     <link rel="stylesheet" href="../../styles/styles.css">
     <script src="../../scripts/script.js" defer></script>
@@ -12,13 +12,13 @@
 <body>
     <header>
         <div class="header-container">
-            <a id="logo" href="../../index.html">
+            <a id="logo" href="../../../index.html">
                 <h1><span>Jovic Francis B. Rayco</span> | 📒Study Notes</h1>
             </a>
 
             <nav>
                 <ul>
-                    <li><a class="homeLink" href="../../index.html">Home</a></li>
+                    <li><a class="homeLink" href="../../../index.html">Home</a></li>
                     <li><a class="projectsLink" href="../projects.html">Projects</a></li>
                     <li><a class="blogsLink" href="../blogs.html">Blogs</a> </li>
                     <li><a class="aboutLink" href="../about.html">About</a></li>
@@ -30,39 +30,37 @@
     <div class="main-aside-container">
         <main class="main-1">
             <section class="hero-section">
-                <h2>On Random Numbers</h2>
-                <p>Date Posted: 08-26-2025</p> <br>
-                <p>Creating random number generators tends to be my go-to hello world program when trying to 
-                    learn something new in terms of frameworks or languages, such as when I made an FFV 
-                    random jobpicker at android studio during senior highschool, or when I made a random 
-                    number generator at Laravel as my initial warmup before the OJT project began. It wont be my permanent 
-                    go-to, but it tends to be my go-to, even now in learning react and node.js. Maybe I'll warmup in C# 
-                    too by making a random number generator...</p>
+                <h2>AI-Driven Pipeline Development</h2>
+
+                <div class="date-details">
+                    <p>Date Posted: 08-26-2025</p>
+                    <p>Date Last Updated: 09-01-2025</p>
+                </div> <br>
+
+                <p>I have always been fascinated with local usage of LLMs, integrating local models to tool pipelines that 
+                    can help assist the learning process for beginners or help assist in other development processes. 
+                    While it is unfortunate that local models are very resource hungry, it is still quite interesting to come up 
+                    with ways to utilize them as automation or assistance tools.</p>
             </section>
 
-            <!-- <section class="picture-section">
-                <img src="" alt="img">
-            </section> -->
+            <section class="picture-section-no-resize">
+                <img src="08262025-ai_driven/Pipeline.png" alt="img">
+            </section>
             
             <section class="body-section">
-                <p>It's because random numbers are quite interesting, they allow randomized behavior in programs, and 
-                    especially games. Sure it is not <em>true</em> random, but it is random <em>enough</em> to make things varied in 
-                    terms of behavior. But in these sorts of generators, I can see that it can be decomposed to the 
-                    following elements: the <em>List</em> containing all of the elements to be picked, the actual <em>Algorithm</em> 
-                    responsible for picking the elements, and a <em>Configuration</em> that limits either the list scope or 
-                    the algorithm's scope of picking.</p>
-                <p>A good example would be the classic random number generator of integers. 
-                    The List is the integers themselves, the Algorithm is whatever algorithm is used, 
-                    and an example of a Configuration is a min value of 0 and a max value of 100, so that 
-                    the algorithm is restricted to picking only from 0 to 100. In a random name generator, 
-                    given that there is a predefined name list, a configuration would be what names are 
-                    included or excluded to the list. This small realization intrigued me.</p>
-                <p>With that in mind, I am currently developing a random number generator site 
-                    using react and node.js, and I want to add a twist. But I want to save that 
-                    for when I actually implement it right. There's a lot to learn from implementing an API,
-                    a database, and a frontend with the help of tailwind css. As someone whose more currently comfortable with
-                    vanilla HTML and CSS, using something different like react, and having proper backend with node.js is going
-                    to be an interesting ride.</p>
+                <p>Here is a very simplified pipeline that in my opinion, has a lot of potential.</p>
+                <p>In the case of my team's thesis project,
+                    it all starts with an assumption of: "What does an LLM need to know before it infers that it will 
+                    create a test case?". Surely it is not only a prompt that says "Create a test case", as an LLM 
+                    may need more 'context' for that. That is where scraping technologies get included in the idea mix, 
+                    to scrape website elements that will serve as context on what test cases to generate. 
+                    It can be a straightforward pipeline on paper, but it opens the possibilities on other 
+                    similar ideas or concepts. Such as automating project idea flow, or scaffold generation.</p>
+                    
+                <p>If more of us can use Local LLMs with more optimized/resource friendly algorithms, 
+                    which is probably too ideal, I find myself very excited to dabble with some assitive 
+                    software tool ideas. But for now, nope, as it is too resource demanding for my machine in 
+                    particular for now. Strong local AI requires strong computing power.</p>
             </section>
 
         </main>
