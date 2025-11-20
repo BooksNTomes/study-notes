@@ -41,6 +41,8 @@
 body{
     min-height:100dvh;
     background-color: var(--overlay);
+    display: flex;
+    flex-direction: column;
 }
 /* Texts */
 h1, h2, h3, h4, h5, h6, p, a, img {
@@ -125,7 +127,6 @@ footer{
     background-color: var(--header-footer-dark);
     box-shadow: 0px -4px 4px var(--shadow-box);
     width:100%;
-    position:fixed;
     left:0;
     bottom: 0;
     z-index:5;
@@ -149,6 +150,7 @@ footer ul{
     padding-bottom:3rem;
     width:var(--docsize-default);
     margin:auto;
+    flex-grow: 1;
     display:flex;
     gap:5rem;
     justify-content: space-between;
