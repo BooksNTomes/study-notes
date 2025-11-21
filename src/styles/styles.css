@@ -6,12 +6,12 @@
 }
 /* Background Image */                                  /* !! We might want to adjust this */
 :root {
+    font-size: 20px;
     background-image: url("../site-images/background.png");
 }
 /* Colors : use var(--name)*/                           /* !! We might want to adjust this */
 /* Original */
-:root {
-
+/* :root {
     --default-white: hsl(44, 100%, 96%);
     --alternate-white: hsl(31, 100%, 91%);
 
@@ -32,6 +32,33 @@
     --visible-arrow: hsl(4, 27%, 20%);
 
     --overlay: hsla(0, 0%, 0%, 0.85);
+
+    --docsize-default: 1000px;
+    --docsize-dynamic: 100%;
+} */
+
+/* Experiment */
+:root {
+    --default-white: #FAE8D3;
+    --emphasis-white: #FAE8D3;
+    --alternate-white: #fcf3e8;
+    
+    --default-black: #3B2521;
+    --header-footer-dark: #3B2521;
+    --visible-arrow: #3B2521;
+    
+    --link-hover-bright: #EB9170;
+    --sect-header-bright: #EB9170;
+    
+    --border-dark: #A34445;
+    --link-emphasis: #A34445;
+    --link-hover-dark: #A34445;
+ 
+    --shadow-text: hsla(0, 0%, 0%, 0.05);
+    --shadow-box: hsla(0, 0%, 0%, 0.20);
+    --shadow-block: black;
+    --transparent-arrow: hsla(4, 27%, 20%, 0.05);
+    --overlay: #201E1E;
 
     --docsize-default: 1000px;
     --docsize-dynamic: 100%;
