@@ -9,45 +9,14 @@
     font-size: 20px;
     background-image: url("../site-images/background.png");
 }
-/* Colors : use var(--name)*/                           /* !! We might want to adjust this */
-/* Original */
-/* :root {
-    --default-white: hsl(44, 100%, 96%);
-    --alternate-white: hsl(31, 100%, 91%);
-
-    --default-black: hsl(4, 27%, 20%);
-    --header-footer-dark: hsl(4, 27%, 20%);
-    --border-dark: hsl(12, 44%, 40%);
-    --sect-header-bright: hsl(12, 100%, 73%);
-    --link-emphasis: hsl(12, 44%, 50%);
-    --link-hover-bright: hsl(12, 100%, 73%);
-    --link-hover-dark: hsl(12, 44%, 40%);
-    --emphasis-white: white;
- 
-    --shadow-text: hsla(0, 0%, 0%, 0.05);
-    --shadow-box: hsla(0, 0%, 0%, 0.20);
-    --shadow-block: black;
-
-    --transparent-arrow: hsla(4, 27%, 20%, 0.05);
-    --visible-arrow: hsl(4, 27%, 20%);
-
-    --overlay: hsla(0, 0%, 0%, 0.85);
-
-    --docsize-default: 1000px;
-    --docsize-dynamic: 100%;
-} */
-
-/* Experiment */
+/* Colors : use var(--name)*/   
 :root {
-    --default-white: #fae7d1;
+    --default-white: #fae8d3;
     --alternate-white: #fcf3e8;
+    --default-black: #3b2521;
     
-    --default-black: #3B2521;
-    --header-footer-dark: #3B2521;
-    --visible-arrow: #3B2521;
-    
-    --link-hover-bright: #e77d57;
-    --sect-header-bright: #ec8e6b;
+    --sect-header-bright: #ee906e;
+    --link-hover-bright: #e8a58c;
     
     --border-dark: #A34445;
     --link-emphasis: #bb5d5f;
@@ -73,6 +42,7 @@ body{
 /* Texts */
 h1, h2, h3, h4, h5, h6, p, a, img {
     font-family: sans-serif;
+    font-weight: 500;
     text-decoration: none;
     text-shadow: 2px 2px 2px var(--shadow-text);
 
@@ -111,7 +81,7 @@ header{
     position:sticky;
     top:0;
     z-index:5;
-    background-color: var(--header-footer-dark);
+    background-color: var(--default-black);
     box-shadow: 0px 4px 4px var(--shadow-box);
 }
 .header-container{
@@ -150,7 +120,7 @@ nav a:hover {
 /*--------------------------------------------------*/
 /* Footer */                                            /* !! We found a solution to the footer problem */
 footer{
-    background-color: var(--header-footer-dark);
+    background-color: var(--default-black);
     box-shadow: 0px -4px 4px var(--shadow-box);
     width:100%;
     left:0;
