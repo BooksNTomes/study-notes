@@ -181,6 +181,7 @@ section {
     background-color: var(--default-white);
 }
 .featured-section li {
+    transition: 0.5s ease;
     background-color: var(--default-white);
     padding: 1rem;
     margin: 0rem 0rem 1rem;
@@ -188,6 +189,7 @@ section {
     text-align-last:right;
 }
 .featured-section li:hover {
+    transition: 0.5s ease;
     background-color: var(--alternate-white);
     padding: 1rem;
     margin: 0rem 0rem 1rem;
@@ -247,10 +249,12 @@ aside h2{
 .quick-links a{
     margin-bottom:1rem;
     text-decoration:underline;
-    color: var(--link-emphasis)
+    color: var(--link-emphasis);
+    transition: 0.5s ease;
 }
 .quick-links a:hover{
     color: var(--link-hover-bright);
+    transition: 0.5s ease;
 }
 /* Featured Projects / Blogs */                                 /* !! We might want to adjust this */
 .featured-project, .featured-blog, .featured-slide {
