@@ -7,7 +7,7 @@
 /* Background Image */                                  /* !! We might want to adjust this */
 :root {
     font-size: 20px;
-    background-image: url("../site-images/background.png");
+    background-image: url("../assets/images/background.png");
 }
 /* Colors : use var(--name)*/                           /* !! We might want to adjust this */
 /* Original */
