@@ -1,0 +1,369 @@
+/* Universal margin-padding */
+*::before,*::after,*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+/* Root EM settings */
+:root {
+    font-size: 20px;
+}
+
+/**************************************************************/
+/**************************************************************/
+/* Body */
+body{
+    min-height:100dvh;
+    background-color: var(--overlay);
+    display: flex;
+    flex-direction: column;
+}
+/* Texts */
+h1, h2, h3, h4, h5, h6, p, a, img {
+    font-family: sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px var(--shadow-text);
+
+    margin: 0rem 0rem 1rem;
+    color: var(--default-white);
+}
+h2 {
+    font-size:28px;
+    color: var(--sect-header-bright);
+}
+h6 {
+    font-size: 12px;
+    margin: 0.5rem 0rem 0.5rem;
+}
+p {
+    font-size:16px;
+    line-height: 2.5    ;
+}
+.link-underline{
+    color:var(--link-emphasis);
+    text-decoration: underline;
+}
+.link-underline:hover{
+    color:var(--link-hover-bright);
+}
+/* Lists */
+ul, li, ol {
+    list-style-type: none;
+}
+/*--------------------------------------------------*/
+/* Header */
+header{
+    margin:0;
+    padding: 0.5rem 0rem 0rem;
+    width:100vw;
+    position:sticky;
+    top:0;
+    z-index:5;
+    background-color: var(--default-black);
+    box-shadow: 0px 4px 4px var(--shadow-box);
+}
+.header-container{
+    width:var(--docsize-default);
+    margin:auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#logo h1 {
+    font-weight:normal;
+    font-size:28px;
+    margin:0;
+}
+#logo h1:hover {
+    color:var(--alternate-white);
+}
+#logo span {
+    color: var(--sect-header-bright);
+}
+nav ul{
+    display:flex;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+nav a {
+    font-size: 18px;
+    text-shadow: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color:var(--alternate-white);
+    text-shadow: var(--shadow-text);
+}
+/*--------------------------------------------------*/
+/* Footer */                                            /* !! We found a solution to the footer problem */
+footer{
+    background-color: var(--default-black);
+    box-shadow: 0px -4px 4px var(--shadow-box);
+    width:100%;
+    left:0;
+    bottom: 0;
+    z-index:5;
+}
+.footer-container{
+    width:var(--docsize-default);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ul{
+    display:flex;
+    gap:1rem;
+    flex-wrap: wrap;
+}
+/*--------------------------------------------------*/
+/* Main-Aside */                                        /* !! There has to be a better way to handle the Aside */
+.main-aside-container{
+    padding-top:3rem;
+    padding-bottom:3rem;
+    width:var(--docsize-default);
+    margin:auto;
+    flex-grow: 1;
+    display:flex;
+    gap:5rem;
+    justify-content: space-between;
+}
+/* Main */
+main{
+    width:75%;
+}
+section {
+    padding:0rem 0rem 1rem;
+}
+.featured-section{
+    display:flex;
+    gap:2rem;
+}
+.projectsLink, .blogsLink{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.projectsLink img, .blogsLink img {
+    width:36px;
+    height:36px;
+}
+.featured-section ol{
+    overflow:scroll;
+    scrollbar-width: none; /* Take note other browser implementations*/
+    height:500px;
+    /* border: 8px solid var(--link-emphasis); */
+    border: 8px solid var(--border-dark);
+    box-shadow: 4px 4px var(--shadow-block);
+    background-color: var(--default-white);
+}
+.featured-section li {
+    transition: 0.5s ease;
+    background-color: var(--default-white);
+    padding: 1rem;
+    margin: 0rem 0rem 1rem;
+    box-shadow: 0px 0px 16px var(--shadow-box);
+    text-align-last:right;
+}
+.featured-section li:hover {
+    transition: 0.5s ease;
+    background-color: var(--alternate-white);
+    padding: 1rem;
+    margin: 0rem 0rem 1rem;
+    box-shadow: 0px 0px 16px var(--shadow-box);
+    /* text-align-last:right; */
+}
+.featured-section li:last-child{
+    margin:0;
+}
+.featured-section li h2, .featured-section li p {
+    text-shadow: 4px 4px 4px var(--shadow-text);
+    text-align-last:left;
+    color: var(--default-black);
+    font-size:14px;
+}
+.featured-section li h2{
+    font-size:24px;
+}
+.see-more-link{
+    text-decoration: underline;
+    text-shadow: 4px 4px 4px var(--shadow-text);
+    color:hsl(12, 44%, 50%);
+}
+.featured-column{
+    min-width:200px;
+    max-width:350px;
+}
+/* Aside */
+aside{
+    width:210px;
+}
+.alinks{
+    text-align: center;
+}
+#profile{
+    display:flex;
+    margin:auto;
+    margin-bottom:1rem;
+    width: 194px;
+    height: 194px;
+    box-shadow: 4px 4px 4px var(--shadow-box);
+}
+.social-links{
+    display:flex;
+    justify-content: center;
+    gap:1rem;
+    flex-wrap: wrap;
+    margin-bottom:2rem;
+    width:216px;
+}
+aside h2{
+    text-align:center;
+}
+.quick-links{
+    text-align: center;
+}
+.quick-links a{
+    margin-bottom:1rem;
+    text-decoration:underline;
+    color: var(--link-emphasis);
+    transition: 0.5s ease;
+}
+.quick-links a:hover{
+    color: var(--link-hover-bright);
+    transition: 0.5s ease;
+}
+
+/* */
+.linkedIn, .github-1, .facebook, .github-2 {
+    width: 48px;
+    height: 48px;
+}
+
+.github-2 {
+    color: var(--alternate-white);
+}
+
+.picture-section {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.picture-section img{
+    width:80%;
+    height:80%;
+}
+.picture-section img:hover{
+    width:200%;
+    height:200%;
+    box-shadow: 0px 0px 12px var(--shadow-box);
+}
+.picture-section-no-resize img{
+    width:80%;
+    height:80%;
+}
+
+.footer-social-links .linkedIn, .footer-social-links .github-1, .footer-social-links .facebook, .footer-social-links .github-2 {
+    width: 24px;
+    height: 24px;
+}
+.date-details p{
+    font-size:12px;
+    margin:0px;
+}
+.credits-section a{
+    margin-left:1rem;
+}
+
+/* Dynamic */                                                       /* !! We might want to adjust this */
+@media all and (width <= 1000px){
+    header{
+        padding-bottom: 1rem;
+    }
+    .header-container{
+        text-align:center;
+        width: 90%;
+        min-width:365px;
+        align-items: center;
+        flex-direction:column;
+    }
+
+    .main-aside-container{
+        width:90%;
+        min-width:365px;
+        align-items:center;
+        flex-direction:column;
+        padding-bottom:10rem;
+    }
+
+    main{
+        order:1;
+    }
+    .main-1{
+        order:2;
+    }
+    aside{
+        width:80%;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        order:1;
+    }
+    .aside-2{
+        order:2;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #profile{
+        margin:1rem;
+    }
+    .social-links{
+        /* width:auto; */
+        padding: 1rem;
+        margin-bottom:0;
+    }
+
+    .picture-section img:hover{
+        box-shadow: 0px 0px 12px var(--shadow-box);
+        width:80%;
+        height:80%;
+    }
+
+
+    footer{
+        padding: 1rem 0rem 1rem;
+        position:relative;
+    }
+    .footer-container{
+        width:90%;
+        min-width:365px;
+        /* text-align:center; */
+        /* align-items:center; */
+        /* flex-direction:column; */
+    }
+
+    .featured-project img, .featured-blog img, .featured-slide img {
+        display:none;
+    }
+
+    .featured-section{
+        overflow:scroll;
+    }
+}
+@media all and (width <= 600px){
+    aside{
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        order:1;
+    }
+
+    .featured-content a {
+        font-size:14px;
+        width:80%;
+        height:80%;
+    }
+}

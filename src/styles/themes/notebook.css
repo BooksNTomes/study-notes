@@ -1,0 +1,22 @@
+/* Colors : use var(--name)*/   
+:root {
+    --default-white: #fae8d3;
+    --alternate-white: #fcf3e8;
+    --default-black: #3b2521;
+    
+    --sect-header-bright: #ee906e;
+    --link-hover-bright: #e8a58c;
+    
+    --border-dark: #A34445;
+    --link-emphasis: #bb5d5f;
+    --link-hover-dark: #7e3536;
+ 
+    --shadow-text: hsla(0, 0%, 0%, 0.05);
+    --shadow-box: hsla(0, 0%, 0%, 0.20);
+    --shadow-block: black;
+    --transparent-arrow: hsla(4, 27%, 20%, 0.05);
+    --overlay: #201E1E;
+
+    --docsize-default: 1000px;
+    --docsize-dynamic: 100%;
+}
