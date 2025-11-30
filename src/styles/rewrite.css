@@ -1,1 +1,48 @@
 /** Let's just rewrite the whole thing to be actually maintainable, again... */
+
+/**=========================*/
+/** SECTION 1 : General */
+    /* Universal margin-padding */
+    *::before,*::after,*{
+        box-sizing:border-box;
+        margin:0;
+        padding:0;
+    }
+
+/** SECTION 2 : Configurations */
+    /** Root Fonts (affects REM) */
+    :root {
+        font-size: 16px;
+    }
+
+    /** Colors */
+    :root {
+        --primary: #000000;
+    }
+
+    /** Texts */
+
+/** SECTION 3 : Common Layouts */
+
+
+/**=========================*/
+/** SECTION 4 : Home */
+
+/** SECTION 5 : About */
+
+
+/**=========================*/
+/** SECTION 6 : Blogs Home */
+
+/** SECTION 7 : Blog */
+
+
+/**=========================*/
+/** SECTION 8 : Projects Home
+
+/** Section 9 : Projects
+
+
+/**=========================*/
+/** SECTION 10 : Dynamic
+
