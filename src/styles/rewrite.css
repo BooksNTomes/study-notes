@@ -3,46 +3,103 @@
 /**=========================*/
 /** SECTION 1 : General */
     /* Universal margin-padding */
-    *::before,*::after,*{
-        box-sizing:border-box;
-        margin:0;
-        padding:0;
-    }
+        *::before,*::after,*{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
 
 /** SECTION 2 : Configurations */
-    /** Root Fonts (affects REM) */
-    :root {
-        font-size: 16px;
-    }
-
+    /** Root Font (size affects REM) */
+        :root {
+            font-size: 16px;
+        }
     /** Colors */
-    :root {
-        --primary: #000000;
-    }
+        :root {
+            --primary: #000000;
+            --secondary: ;
+            --tertiary : ;
 
+            --primary-text: ;
+            --secondary-text: ;
+            --tertiary-text: ;
+
+            --background: ;
+        }
     /** Texts */
+        h1, h2, h3, h4, h5, h6{
+            
+        }
+
+        ul{
+            
+        }
+
+        ol{
+
+        }
+
+        p{
+
+        }
+
+        a{
+
+        }
 
 /** SECTION 3 : Common Layouts */
+    .nav-header{
 
+    }
+    .footer{
+
+    }
 
 /**=========================*/
 /** SECTION 4 : Home */
+    .home-main{
+
+    }
+    .home-featured{
+
+    }
 
 /** SECTION 5 : About */
+    .about-main{
 
+    }
 
 /**=========================*/
 /** SECTION 6 : Blogs Home */
+    .blogs-main{
+
+    }
+    .blogs-featured{
+
+    }
 
 /** SECTION 7 : Blog */
+    .blog{
 
-
-/**=========================*/
-/** SECTION 8 : Projects Home
-
-/** Section 9 : Projects
-
+    }
 
 /**=========================*/
-/** SECTION 10 : Dynamic
+/** SECTION 8 : Projects Home */
+    .projects-main{
 
+    }
+    .projects-featured{
+
+    }
+
+/** Section 9 : Projects */
+    .project{
+
+    }
+
+/**=========================*/
+/** SECTION 10 : Dynamic (Desktop, Laptop/Medium, Phone/Small Sizes) */
+
+@media all{
+
+}
