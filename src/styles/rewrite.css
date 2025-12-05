@@ -9,6 +9,7 @@
             padding:0;
         }
 
+/**=========================*/
 /** SECTION 2 : Configurations */
     /** Root Font (size affects REM) */
         :root {
@@ -47,12 +48,56 @@
 
         }
 
+/**=========================*/
 /** SECTION 3 : Common Layouts */
+    /** Nav-Header */
     .nav-header{
 
     }
+    .nav-header-logo{
+
+    }
+    .nav-header-list{
+
+    }
+    .nav-header-navelement{
+
+    }
+    /** Footer */
     .footer{
 
+    }
+    .footer-text{
+
+    }
+    .footer-links{
+
+    }
+    .footer-logolinks{
+
+    }
+    /** Aside */
+    .aside{
+
+    }
+    .aside-links{
+
+    }
+    .aside-images{
+
+    }
+    .aside-logolinks{
+
+    }
+    /** Section */
+    .section{
+
+    }
+    .section-header{
+
+    }
+    .section-paragraph{
+        
     }
 
 /**=========================*/
@@ -66,6 +111,9 @@
 
 /** SECTION 5 : About */
     .about-main{
+
+    }
+    .about-tech-stack{
 
     }
 
@@ -82,6 +130,9 @@
     .blog{
 
     }
+    .blog-images{
+
+    }
 
 /**=========================*/
 /** SECTION 8 : Projects Home */
@@ -92,14 +143,29 @@
 
     }
 
+/**=========================*/
 /** Section 9 : Projects */
     .project{
+
+    }
+    .project-images{
 
     }
 
 /**=========================*/
 /** SECTION 10 : Dynamic (Desktop, Laptop/Medium, Phone/Small Sizes) */
 
-@media all{
+    /** Medium */
+    @media all{
 
-}
+    }
+
+    /** Small */
+    @media all{
+
+    }
+
+    /** Mobile */
+    @media all{
+
+    }
