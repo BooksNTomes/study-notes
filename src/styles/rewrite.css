@@ -50,6 +50,18 @@
 
 /**=========================*/
 /** SECTION 3 : Common Layouts */
+    /** Body **/
+    body{
+
+    }
+    /** Nav */
+    nav{
+
+    }
+    /** Header */
+    header{
+
+    }
     /** Nav-Header */
     .nav-header{
 
@@ -64,7 +76,7 @@
 
     }
     /** Footer */
-    .footer{
+    footer{
 
     }
     .footer-text{
@@ -76,8 +88,12 @@
     .footer-logolinks{
 
     }
+    /** Main */
+    main{
+
+    }
     /** Aside */
-    .aside{
+    aside{
 
     }
     .aside-links{
@@ -90,7 +106,7 @@
 
     }
     /** Section */
-    .section{
+    section{
 
     }
     .section-header{
