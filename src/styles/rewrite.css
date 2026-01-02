@@ -14,49 +14,79 @@
     /** Root Font (size affects REM) */
         :root {
             font-size: 16px;
+            font-family: sans-serif;
         }
     /** Colors */
         :root {
-            --primary: #000000;
-            --secondary: ;
-            --tertiary : ;
-
-            --primary-text: ;
-            --secondary-text: ;
-            --tertiary-text: ;
-
-            --background: ;
+            
+            --primary-1: #fae7d1;
+            
+            --secondary-1: #3B2521;
+            
+            --accent-1: #e77d57;
+            --accent-2: #bb5d5f;
+            --accent-3: #A34445;
+            
+            --white: #fcf3e8;
+            --black: #201E1E;
+            
+            --shadow-1: hsla(0, 0%, 0%, 0.20);
+            
+        }
+    /** Background **/
+        :root {
+            background-color: var(--black);
+            /* background-color: var(--white); */
         }
     /** Texts */
         h1, h2, h3, h4, h5, h6{
-            
+            color: var(--primary-1);
+            /* color: var(--secondary-1); */
         }
 
         ul{
-            
+            color: var(--primary-1);
+            /* color: var(--secondary-1); */
         }
 
         ol{
+            color: var(--primary-1);
+            /* color: var(--secondary-1); */
+        }
 
+        li{
+            color: var(--primary-1);
+            /* color: var(--secondary-1); */
+            list-style-type: none;
         }
 
         p{
-
+            color: var(--primary-1);
+            /* color: var(--secondary-1); */
         }
 
         a{
-
+            color: var(--primary-1);
+            /* color: var(--secondary-1); */
+            text-decoration: none;
         }
 
+        .a-underline{
+            color: var(--primary-1);
+            /* color: var(--secondary-1); */
+            text-decoration: underline;
+        }
 /**=========================*/
 /** SECTION 3 : Common Layouts */
     /** Body **/
     body{
-
+        display:flex;
+        flex-direction: column;
     }
     /** Nav */
     nav{
-
+        display:flex;
+        gap: 4rem;
     }
     /** Header */
     header{
@@ -64,26 +94,43 @@
     }
     /** Nav-Header */
     .nav-header{
-
+        background-color: var(--secondary-1);
+        /* background-color: var(--primary-1); */
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top:1rem;
+        padding-left:4rem;
+        padding-right:4rem;
+        padding-bottom:1rem;
     }
     .nav-header-logo{
 
     }
     .nav-header-list{
-
+        
     }
     .nav-header-navelement{
 
     }
     /** Footer */
     footer{
-
+        background-color: var(--secondary-1);
+        /* background-color: var(--primary-1); */
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top:1rem;
+        padding-left:4rem;
+        padding-right:4rem;
+        padding-bottom:1rem;
     }
     .footer-text{
 
     }
     .footer-links{
-
+        display:flex;
+        gap: 4rem;
     }
     .footer-logolinks{
 
