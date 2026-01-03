@@ -137,20 +137,22 @@
     }
     /** Main */
     main{
-
+        width:70%;
     }
     /** Aside */
     aside{
-
+        width:30%;
+        text-align: center;
     }
     .aside-links{
 
     }
     .aside-images{
-
+        
     }
     .aside-logolinks{
-
+        display:flex;
+        justify-content: center;
     }
     /** Section */
     section{
@@ -165,8 +167,14 @@
 
 /**=========================*/
 /** SECTION 4 : Home */
-    .home-main{
-
+    #home-main{
+        display:flex;
+        justify-content: space-between;
+        
+        padding-top:1rem;
+        padding-left:4rem;
+        padding-right:4rem;
+        padding-bottom:1rem;
     }
     .home-featured{
 
