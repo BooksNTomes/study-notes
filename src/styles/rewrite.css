@@ -23,6 +23,7 @@
             
             --secondary-1: #3B2521;
             
+            --accent-0: #ec8e6b;
             --accent-1: #e77d57;
             --accent-2: #bb5d5f;
             --accent-3: #A34445;
@@ -77,110 +78,113 @@
             text-decoration: underline;
         }
 /**=========================*/
-/** SECTION 3 : Common Layouts */
-    /** Body **/
-    body{
-        display:flex;
-        flex-direction: column;
-    }
-    /** Nav */
-    nav{
-        display:flex;
-        gap: 4rem;
-    }
-    /** Header */
-    header{
-
-    }
-    /** Nav-Header */
-    .nav-header{
-        background-color: var(--secondary-1);
-        /* background-color: var(--primary-1); */
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+/** SECTION 3 : Common Styles */
+    .padding-layout {
         padding-top:1rem;
         padding-left:4rem;
         padding-right:4rem;
         padding-bottom:1rem;
-    }
-    .nav-header-logo{
-
-    }
-    .nav-header-list{
-        
-    }
-    .nav-header-navelement{
-
-    }
-    /** Footer */
-    footer{
-        background-color: var(--secondary-1);
-        /* background-color: var(--primary-1); */
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top:1rem;
-        padding-left:4rem;
-        padding-right:4rem;
-        padding-bottom:1rem;
-    }
-    .footer-text{
-
-    }
-    .footer-links{
-        display:flex;
-        gap: 4rem;
-    }
-    .footer-logolinks{
-
-    }
-    /** Main */
-    main{
-        width:70%;
-    }
-    /** Aside */
-    aside{
-        width:30%;
-        text-align: center;
-    }
-    .aside-links{
-
-    }
-    .aside-images{
-        
-    }
-    .aside-logolinks{
-        display:flex;
-        justify-content: center;
-    }
-    /** Section */
-    section{
-
-    }
-    .section-header{
-
-    }
-    .section-paragraph{
-        
     }
 
 /**=========================*/
-/** SECTION 4 : Home */
+/**=========================*/
+/** SECTION 4 : Layouts */
+    /** Body **/
+        body{
+            display:flex;
+            flex-direction: column;
+        }
+        /** Nav */
+        nav{
+            display:flex;
+            gap: 4rem;
+        }
+        /** Header */
+        header{
+
+        }
+    /** Nav-Header */
+        .nav-header{
+            background-color: var(--secondary-1);
+            /* background-color: var(--primary-1); */
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-header-logo{
+
+        }
+        .nav-header-list{
+            
+        }
+        .nav-header-navelement{
+
+        }
+    /** Footer */
+        footer{
+            background-color: var(--secondary-1);
+            /* background-color: var(--primary-1); */
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-text{
+
+        }
+        .footer-links{
+            display:flex;
+            gap: 4rem;
+        }
+        .footer-logolinks{
+
+        }
+    /** Main */
+        main{
+            width:70%;
+        }
+    /** Aside */
+        aside{
+            width:30%;
+            text-align: center;
+        }
+        .aside-links{
+
+        }
+        .aside-images{
+            
+        }
+        .aside-logolinks{
+            display:flex;
+            justify-content: center;
+        }
+    /** Section */
+        section{
+
+        }
+        .section-header{
+
+        }
+        .section-paragraph{
+            
+        }
+
+/**=========================*/
+/** SECTION 5 : Home */
     #home-main{
         display:flex;
         justify-content: space-between;
-        
-        padding-top:1rem;
-        padding-left:4rem;
-        padding-right:4rem;
-        padding-bottom:1rem;
+    }
+    #home-main h2{
+        color: var(--accent-0);
+    }
+    #home-main p{
+        padding:1rem;
     }
     .home-featured{
-
+        display:flex;
     }
 
-/** SECTION 5 : About */
+/** SECTION 6 : About */
     .about-main{
 
     }
@@ -189,7 +193,7 @@
     }
 
 /**=========================*/
-/** SECTION 6 : Blogs Home */
+/** SECTION 7 : Blogs Home */
     .blogs-main{
 
     }
@@ -197,7 +201,7 @@
 
     }
 
-/** SECTION 7 : Blog */
+/** SECTION 8 : Blog */
     .blog{
 
     }
@@ -206,7 +210,7 @@
     }
 
 /**=========================*/
-/** SECTION 8 : Projects Home */
+/** SECTION 9 : Projects Home */
     .projects-main{
 
     }
@@ -215,7 +219,7 @@
     }
 
 /**=========================*/
-/** Section 9 : Projects */
+/** Section 10 : Projects */
     .project{
 
     }
@@ -224,7 +228,7 @@
     }
 
 /**=========================*/
-/** SECTION 10 : Dynamic (Desktop, Laptop/Medium, Phone/Small Sizes) */
+/** SECTION 11 : Dynamic (Desktop, Laptop/Medium, Phone/Small Sizes) */
 
     /** Medium */
     @media all{
