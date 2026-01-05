@@ -10,12 +10,12 @@
     :root {
     background-image: url("../assets/images/background.png");
 }
-/* Default Font Sizing */
+/**=========================*/
+/** SECTION 1 : Configurations */
+/* Default Font Setting (REM)*/
     :root {
     font-size: 20px;
 }
-/**=========================*/
-/** SECTION 1 : Configurations */
 /* Colors */
     :root {
         --primary-1: #fae7d1;
@@ -38,35 +38,41 @@
         --shadow-box: hsla(0, 0%, 0%, 0.20);
         --shadow-block: black;
     }
-/** Screen Sizing */
+/** Screen Sizing ? */
     :root{
         --docsize-default: 1000px;
         --docsize-dynamic: 100%;
     }
+/** Default Text Setting */
+    h1, h2, h3, h4, h5, h6, p, a, img {
+        font-family: sans-serif;
+        text-decoration: none;
+        text-shadow: 2px 2px 2px var(--shadow-1); 
+        color: var(--white);
+    }
 /**=========================*/
-/** SECTION 2 : Common Styles*/
-
-
-
-
-
-
+/** SECTION 2 : Layouts*/
+    .default-padding {
+        padding: 1rem 4rem 1rem;
+    }
+    .default-margin {
+        margin: 0rem 1rem 0rem;
+    }
+    .flex-column {
+        display:flex;
+        flex-direction:column;
+    }
 /**=========================*/
 /* Body */
 body{
-    min-height:100dvh;
+    /* min-height:100dvh; */
     background-color: var(--black);
     display: flex;
     flex-direction: column;
 }
 /* Texts */
 h1, h2, h3, h4, h5, h6, p, a, img {
-    font-family: sans-serif;
-    text-decoration: none;
-    text-shadow: 2px 2px 2px var(--shadow-1);
-
     margin: 0rem 0rem 1rem;
-    color: var(--white);
 }
 h2 {
     font-size:28px;
