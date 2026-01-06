@@ -1,22 +1,22 @@
 /**=========================*/
 /** SECTION 0 : General */
-/* Universal margin-padding */
+    /* Universal margin-padding */
     *::before,*::after,*{
         box-sizing:border-box;
         margin:0;
         padding:0;
 }
-/* Background Image */                                  /* !! We might want to adjust this */
+    /* Background Image */                                  /* !! We might want to adjust this */
     :root {
     background-image: url("../assets/images/background.png");
 }
 /**=========================*/
 /** SECTION 1 : Configurations */
-/* Default Font Setting (REM)*/
+    /* Default Font Setting (REM)*/
     :root {
     font-size: 20px;
 }
-/* Colors */
+    /* Colors */
     :root {
         --primary-1: #fae7d1;
         
@@ -32,48 +32,124 @@
         
         --shadow-1: hsla(0, 0%, 0%, 0.20);
         
-        /** !!! */
-        --transparent-arrow: hsla(4, 27%, 20%, 0.05);
-        --shadow-text: hsla(0, 0%, 0%, 0.05);
-        --shadow-box: hsla(0, 0%, 0%, 0.20);
-        --shadow-block: black;
     }
-/** Screen Sizing ? */
+    /** Shadow Settings */
+    :root {
+        --text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.05);
+        
+        --box-shadow-1: 4px 4px 0px hsla(0, 0%, 0%, 0.20);
+        --box-shadow-2: 0px 0px 4px hsla(0, 0%, 0%, 0.20);
+        --box-shadow-3: 0px 0px 12px hsla(0, 0%, 0%, 0.20);
+        
+        --transparent-arrow: hsla(4, 27%, 20%, 0.05);
+
+        --shadow-block: 4px 4px 0px black;
+    }
+    /** Screen Sizing ? */
     :root{
         --docsize-default: 1000px;
         --docsize-dynamic: 100%;
     }
-/** Default Text Setting */
+    /** Default Text Setting */
     h1, h2, h3, h4, h5, h6, p, a, img {
         font-family: sans-serif;
         text-decoration: none;
-        text-shadow: 2px 2px 2px var(--shadow-1); 
+        margin: 0rem 0rem 1rem;
+        text-shadow: var(--text-shadow); 
         color: var(--white);
     }
-/**=========================*/
-/** SECTION 2 : Layouts*/
-    .default-padding {
-        padding: 1rem 4rem 1rem;
+    p {
+        margin: 0rem 0rem 1rem;
     }
+    /** Default List Setting */
+    li {
+        list-style-type: none;
+    }
+/**=========================*/
+/** SECTION 2 : Common Layouts*/
+    
+    .default-padding {
+        padding: 0.5rem 4rem 0.5rem;
+    }
+    
     .default-margin {
         margin: 0rem 1rem 0rem;
     }
+
+    .no-margin {
+        margin: 0rem 0rem 0rem;
+    }
+    
     .flex-column {
         display:flex;
         flex-direction:column;
     }
+
+    .flex-center-space {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-top {
+        position:sticky;
+        top:0;
+        z-index:5;
+    }
+
+    .links-horizontal{
+        display:flex;
+        flex-wrap: wrap;
+        gap:2rem;
+    }
+
 /**=========================*/
-/* Body */
-body{
-    /* min-height:100dvh; */
-    background-color: var(--black);
-    display: flex;
-    flex-direction: column;
-}
-/* Texts */
-h1, h2, h3, h4, h5, h6, p, a, img {
-    margin: 0rem 0rem 1rem;
-}
+/** SECTION 3 : Specific Layouts */
+    /* Body */
+    body{
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+    }
+    /* Header (Navbar) */
+    header {
+        background-color: var(--secondary-1);
+        box-shadow: var(--box-shadow-1);
+    }
+        /** Logo */
+        #logo{
+            font-size:28px;
+        }
+        #logo:hover {
+            color:var(--primary-1);
+        }
+        #logo span {
+            color: var(--accent-0);
+        }
+        /** Nav */
+        nav a {
+            font-size: 18px;
+            text-shadow: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color:var(--primary-1);
+            text-shadow: var(--text-shadow);
+        }
+    /* Footer */
+    footer{
+        background-color: var(--secondary-1);
+        box-shadow: 0px -4px 4px var(--shadow-1);
+        
+        left:0;
+        bottom: 0;
+        z-index:5;
+    }
+
+
+
+
+
 h2 {
     font-size:28px;
     color: var(--accent-0);
@@ -97,72 +173,13 @@ p {
 ul, li, ol {
     list-style-type: none;
 }
-/* Header */
-header{
-    margin:0;
-    padding: 0.5rem 0rem 0rem;
-    width:100vw;
-    position:sticky;
-    top:0;
-    z-index:5;
-    background-color: var(--secondary-1);
-    box-shadow: 0px 4px 4px var(--shadow-1);
-}
-.header-container{
-    width:var(--docsize-default);
-    margin:auto;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
 
-#logo h1 {
-    font-weight:normal;
-    font-size:28px;
-    margin:0;
-}
-#logo h1:hover {
-    color:var(--primary-1);
-}
-#logo span {
-    color: var(--accent-0);
-}
-nav ul{
-    display:flex;
-    flex-wrap: wrap;
-    gap:2rem;
-}
-nav a {
-    font-size: 18px;
-    text-shadow: none;
-    font-weight: bold;
-}
-nav a:hover {
-    color:var(--primary-1);
-    text-shadow: var(--shadow-1);
-}
+
+
+
+
 /*--------------------------------------------------*/
-/* Footer */
-footer{
-    background-color: var(--secondary-1);
-    box-shadow: 0px -4px 4px var(--shadow-1);
-    width:100%;
-    left:0;
-    bottom: 0;
-    z-index:5;
-}
-.footer-container{
-    width:var(--docsize-default);
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-footer ul{
-    display:flex;
-    gap:1rem;
-    flex-wrap: wrap;
-}
+
 /*--------------------------------------------------*/
 /* Main-Aside */                                        /* !! There has to be a better way to handle the Aside */
 .main-aside-container{
@@ -222,7 +239,7 @@ section {
     margin:0;
 }
 .featured-section li h2, .featured-section li p {
-    text-shadow: 4px 4px 4px var(--shadow-1);
+    text-shadow: var(--text-shadow);
     text-align-last:left;
     color: var(--black);
     font-size:14px;
@@ -232,7 +249,7 @@ section {
 }
 .see-more-link{
     text-decoration: underline;
-    text-shadow: 4px 4px 4px var(--shadow-1);
+    text-shadow: var(--text-shadow);
     color:hsl(12, 44%, 50%);
 }
 .featured-column{
@@ -350,7 +367,7 @@ aside h2{
 #left-arrow:hover, #right-arrow:hover{
     color:hsl(4, 27%, 20%);
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 4px var(--shadow-box);
+    box-shadow: var(--box-shadow-2);
 }
 #right-arrow{
     right: 0;
@@ -361,7 +378,7 @@ aside h2{
 .stack-section{
     padding:1rem;
     border: 4px solid var(--accent-3);
-    box-shadow: 4px 4px 0px var(--shadow-1);
+    box-shadow: var(--box-shadow-1);
 }
 #tech-stack{
     padding: 1rem;
@@ -378,7 +395,7 @@ aside h2{
 .techlist-col li {
     background-color: var(--primary-1);
     border: 1px solid var(--accent-3) ;
-    box-shadow: 4px 4px 0px var(--shadow-block);
+    box-shadow: var(--shadow-block);
     
     /* display:flex; */
     /* flex-wrap:wrap; */
@@ -516,7 +533,7 @@ aside h2{
     }
 
     .picture-section img:hover{
-        box-shadow: 0px 0px 12px var(--shadow-box);
+        box-shadow: var(--box-shadow-3);
         width:80%;
         height:80%;
     }
