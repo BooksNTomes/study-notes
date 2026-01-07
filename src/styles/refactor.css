@@ -14,7 +14,7 @@
 /** SECTION 1 : Configurations */
     /* Default Font Setting (REM)*/
     :root {
-    font-size: 20px;
+    font-size: 16px;
 }
     /* Colors */
     :root {
@@ -40,6 +40,8 @@
         --box-shadow-1: 4px 4px 0px hsla(0, 0%, 0%, 0.20);
         --box-shadow-2: 0px 0px 4px hsla(0, 0%, 0%, 0.20);
         --box-shadow-3: 0px 0px 12px hsla(0, 0%, 0%, 0.20);
+        --box-shadow-4: 4px 4px 4px hsla(0, 0%, 0%, 0.20);
+        --box-shadow--1: 4px -4px 0px hsla(0, 0%, 0%, 0.20);
         
         --transparent-arrow: hsla(4, 27%, 20%, 0.05);
 
@@ -60,10 +62,16 @@
     }
     p {
         margin: 0rem 0rem 1rem;
+        line-height: 2.5 
     }
     /** Default List Setting */
     li {
         list-style-type: none;
+    }
+    /** Other Defaults */
+    h2 {
+        font-size:28px;
+        color: var(--accent-0);
     }
 /**=========================*/
 /** SECTION 2 : Common Layouts*/
@@ -88,6 +96,11 @@
     .flex-center-space {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    .flex-space {
+        display: flex;
         justify-content: space-between;
     }
 
@@ -117,13 +130,13 @@
         box-shadow: var(--box-shadow-1);
     }
         /** Logo */
-        #logo{
+        nav #logo{
             font-size:28px;
         }
-        #logo:hover {
+        nav #logo:hover {
             color:var(--primary-1);
         }
-        #logo span {
+        nav #logo span {
             color: var(--accent-0);
         }
         /** Nav */
@@ -139,63 +152,68 @@
     /* Footer */
     footer{
         background-color: var(--secondary-1);
-        box-shadow: 0px -4px 4px var(--shadow-1);
+        box-shadow: var(--box-shadow--1);
         
         left:0;
         bottom: 0;
         z-index:5;
     }
+        footer .footer-social-links svg {
+            width: 32px;
+            height: 32px;
+        }
+        footer h6 {
+            font-size: 12px;
+            margin: 0.5rem 0rem 0.5rem;
+        }
+    /* Main - Aside Flex */
+    /* Main issue is aside, especially in sizing 
+       Proposal: Add aside to navbar when the screen get sufficiently smaller, and make the image much smaller*/
+    .main-aside-container {
+        padding: 2rem 12rem 2rem;
+    }
+        /* Review This: Look into how main and aside should be sized */
+        /* Main */
 
-
-
-
-
-h2 {
-    font-size:28px;
-    color: var(--accent-0);
-}
-h6 {
-    font-size: 12px;
-    margin: 0.5rem 0rem 0.5rem;
-}
-p {
-    font-size:16px;
-    line-height: 2.5    ;
-}
-.link-underline{
-    color:var(--accent-2);
-    text-decoration: underline;
-}
-.link-underline:hover{
-    color:var(--accent-1);
-}
-/* Lists */
-ul, li, ol {
-    list-style-type: none;
-}
-
-
-
-
-
-/*--------------------------------------------------*/
+        /* Aside */
+        aside {
+            text-align: center;
+        }
+            aside #profile{
+                display:flex;
+                margin:auto;
+                margin-bottom:1rem;
+                width: 194px;
+                height: 194px;
+                box-shadow: var(--box-shadow-4);
+            }
+            aside .social-links{
+                display:flex;
+                justify-content: center;
+                gap:1rem;
+                flex-wrap: wrap;
+                
+                margin-bottom:2rem;
+                width:216px;
+            }
+            aside .quick-links a{
+                margin-bottom:1rem;
+                text-decoration:underline;
+                color: var(--accent-2)
+            }
+            aside .quick-links a:hover{
+                color: var(--accent-1);
+            }
+        
 
 /*--------------------------------------------------*/
 /* Main-Aside */                                        /* !! There has to be a better way to handle the Aside */
-.main-aside-container{
-    padding-top:3rem;
-    padding-bottom:3rem;
-    width:var(--docsize-default);
-    margin:auto;
-    flex-grow: 1;
-    display:flex;
-    gap:5rem;
-    justify-content: space-between;
-}
+
 /* Main */
-main{
+/* main{
     width:75%;
-}
+} */
+
 section {
     padding:0rem 0rem 1rem;
 }
@@ -257,42 +275,8 @@ section {
     max-width:350px;
 }
 /* Aside */
-aside{
-    width:210px;
-}
-.alinks{
-    text-align: center;
-}
-#profile{
-    display:flex;
-    margin:auto;
-    margin-bottom:1rem;
-    width: 194px;
-    height: 194px;
-    box-shadow: 4px 4px 4px var(--shadow-1);
-}
-.social-links{
-    display:flex;
-    justify-content: center;
-    gap:1rem;
-    flex-wrap: wrap;
-    margin-bottom:2rem;
-    width:216px;
-}
-aside h2{
-    text-align:center;
-}
-.quick-links{
-    text-align: center;
-}
-.quick-links a{
-    margin-bottom:1rem;
-    text-decoration:underline;
-    color: var(--accent-2)
-}
-.quick-links a:hover{
-    color: var(--accent-1);
-}
+
+
 /* Featured Projects / Blogs */                                 /* !! We might want to adjust this */
 .featured-project, .featured-blog, .featured-slide {
     /* padding:16px; */
@@ -472,10 +456,6 @@ aside h2{
     height:80%;
 }
 
-.footer-social-links .linkedIn, .footer-social-links .github-1, .footer-social-links .facebook, .footer-social-links .github-2 {
-    width: 24px;
-    height: 24px;
-}
 .date-details p{
     font-size:12px;
     margin:0px;
