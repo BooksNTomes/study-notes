@@ -41,6 +41,7 @@
         --box-shadow-2: 0px 0px 4px hsla(0, 0%, 0%, 0.20);
         --box-shadow-3: 0px 0px 12px hsla(0, 0%, 0%, 0.20);
         --box-shadow-4: 4px 4px 4px hsla(0, 0%, 0%, 0.20);
+        --box-shadow-5: 0px 0px 16px hsla(0, 0%, 0%, 0.20);
         --box-shadow--1: 4px -4px 0px hsla(0, 0%, 0%, 0.20);
         
         --transparent-arrow: hsla(4, 27%, 20%, 0.05);
@@ -77,7 +78,7 @@
 /** SECTION 2 : Common Layouts*/
     
     .default-padding {
-        padding: 0.5rem 4rem 0.5rem;
+        padding: 1rem 8rem 1rem;
     }
     
     .default-margin {
@@ -170,26 +171,35 @@
     /* Main issue is aside, especially in sizing 
        Proposal: Add aside to navbar when the screen get sufficiently smaller, and make the image much smaller*/
     .main-aside-container {
-        padding: 2rem 12rem 2rem;
+        padding: 2rem 9rem 2rem;
+        /* margin: auto; */ /* To be Reviewed */
+        /* max-width: 2000px; */ /* To be Reviewed */
+        
     }
         /* Review This: Look into how main and aside should be sized */
         /* Main */
-        /* main {
-            width: 75%;
-        } */
+        main {
+            /* margin-right: 8rem ; */ /* To be Reviewed */
+            /* min-width:700px; */ /* To be Reviewed */
+            max-width:850px;
+        }
             main section {
                 padding:0rem 0rem 1rem;
             }
         /* Aside */
         aside {
+            /* margin-left: 8rem ; */ /* To be Reviewed */
             text-align: center;
         }
             aside #profile{
                 display:flex;
-                margin:auto;
-                margin-bottom:1rem;
+                justify-content: center;
+                
+                margin-bottom:2rem;
+                
                 width: 194px;
                 height: 194px;
+
                 box-shadow: var(--box-shadow-4);
             }
             aside .social-links{
@@ -197,13 +207,16 @@
                 justify-content: center;
                 gap:1rem;
                 flex-wrap: wrap;
-                
+
                 margin-bottom:2rem;
-                width:216px;
+
+                width: 194px;
             }
             aside .quick-links a{
-                margin-bottom:1rem;
                 text-decoration:underline;
+
+                margin-bottom:2rem;
+                
                 color: var(--accent-2)
             }
             aside .quick-links a:hover{
@@ -215,7 +228,7 @@
         height: 48px;
     }
     .github-2 {
-        color: var(--primary-1);
+        color: var(--accent-0);
     }
 
 /**=========================*/
@@ -317,14 +330,13 @@
 /* index.html */
     /* Featured Section */
     .featured-section{
-        display:flex;
-        gap:2rem;
+        display: flex;
+        gap: 4rem;
     }
         .featured-section .featured-column{
-            min-width:200px;
+            /* min-width:200px; */ /* To be reviewed */
             max-width:350px;
         }
-
         .featured-section .projectsLink, .featured-section .blogsLink{
             display: flex;
             align-items: center;
@@ -338,78 +350,77 @@
             overflow:scroll;
             scrollbar-width: none; /* Take note other browser implementations*/
             height:500px;
+
             /* border: 8px solid var(--link-emphasis); */
+
             border: 8px solid var(--accent-3);
-            box-shadow: 4px 4px var(--shadow-1);
+            box-shadow: var(--box-shadow-4);
             background-color: var(--white);
         }
-        .featured-section li {
-            background-color: var(--white);
-            padding: 1rem;
-            margin: 0rem 0rem 1rem;
-            box-shadow: 0px 0px 16px var(--shadow-1);
-            text-align-last:right;
-        }
-        .featured-section li:hover {
-            background-color: var(--primary-1);
-            padding: 1rem;
-            margin: 0rem 0rem 1rem;
-            box-shadow: 0px 0px 16px var(--shadow-1);
-            /* text-align-last:right; */
-        }
-        .featured-section li:last-child{
-            margin:0;
-        }
-        .featured-section li h2, .featured-section li p {
-            text-shadow: var(--text-shadow);
-            text-align-last:left;
-            color: var(--black);
-            font-size:14px;
-        }
-        .featured-section li h2{
-            font-size:24px;
-        }
-        .featured-section .see-more-link{
+            .featured-section li {
+                background-color: var(--white);
+                padding: 1rem;
+                margin: 0rem 0rem 1rem;
+                box-shadow: var(--box-shadow-5);
+                text-align-last:right;
+            }
+                .featured-section li:hover {
+                    background-color: var(--primary-1);
+                }
+                .featured-section li:last-child{
+                    margin:0;
+                }
+                .featured-section li h2, .featured-section li p {
+                    text-shadow: var(--text-shadow);
+                    text-align-last:left;
+                    color: var(--black);
+                    font-size:14px;
+                }
+                .featured-section li h2{
+                    font-size:24px;
+                }
+        /* To be reviewed */
+        /* .featured-section .see-more-link{
             text-decoration: underline;
             text-shadow: var(--text-shadow);
             color:hsl(12, 44%, 50%);
-        }
+        } */
 /* projects.html, blogs.html */
     /* Featured Projects / Blogs */                                 /* !! We might want to adjust this */
     .featured-project, .featured-blog, .featured-slide {
         display:flex;
     }
-    .featured-project img, .featured-blog img, .featured-slide img {
-        min-width:50%;
-        max-width:50%;
-        box-shadow: 0px 8px 16px var(--shadow-1);
-        margin-bottom:0;
-        object-fit: cover;
-    }
+        .featured-project img, .featured-blog img, .featured-slide img {
+            min-width:50%;
+            max-width:50%;
+            box-shadow: 0px 8px 16px var(--shadow-1);
+            margin-bottom:0;
+            object-fit: cover;
+        }
     .featured-content{
         text-align:left;
         padding: 24px;
         /* text-align:right; */
     }
-    .featured-content h3, .featured-content h4, .featured-content p {
-        color: var(--black);
-    }
-    .featured-content h3 {
-        font-size: 28px;
-    }
-    .featured-content a{
-        border:none;
-        border-radius: 0px;
-        padding:8px 12px;
-        font-size:16px;
-        font-weight:bold;
-        background-color: var(--accent-2);
-        box-shadow: 4px 4px 4px var(--shadow-1);
-    }
-    .featured-content a:hover{
-        transition: 0.3s ease;
-        background-color: var(--accent-1);
-    }
+        .featured-content h3, .featured-content h4, .featured-content p {
+            color: var(--black);
+        }
+        .featured-content h3 {
+            font-size: 28px;
+        }
+        .featured-content a{
+            border:none;
+            border-radius: 0px;
+            padding:8px 12px;
+            font-size:16px;
+            font-weight:bold;
+            background-color: var(--accent-2);
+            box-shadow: 4px 4px 4px var(--shadow-1);
+        }
+        .featured-content a:hover{
+            transition: 0.3s ease;
+            background-color: var(--accent-1);
+        }
     #featured-blogs-hero, #featured-projects-hero{
         z-index:2;
         position:relative;
@@ -445,15 +456,15 @@
         color:var(--transparent-arrow);
         font-size:32px;
     }
-    #left-arrow:hover, #right-arrow:hover{
-        color:hsl(4, 27%, 20%);
-        background-color: rgba(0, 0, 0, 0.2);
-        box-shadow: var(--box-shadow-2);
-    }
-    #right-arrow{
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
+        #left-arrow:hover, #right-arrow:hover{
+            color:hsl(4, 27%, 20%);
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: var(--box-shadow-2);
+        }
+        #right-arrow{
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
 
 /* about.html */
     .stack-section{
