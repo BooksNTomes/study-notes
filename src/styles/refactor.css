@@ -42,9 +42,11 @@
         --box-shadow-3: 0px 0px 12px hsla(0, 0%, 0%, 0.20);
         --box-shadow-4: 4px 4px 4px hsla(0, 0%, 0%, 0.20);
         --box-shadow-5: 0px 0px 16px hsla(0, 0%, 0%, 0.20);
+        --box-shadow-6: 0px 8px 16px hsla(0, 0%, 0%, 0.20);
         --box-shadow--1: 4px -4px 0px hsla(0, 0%, 0%, 0.20);
         
         --transparent-arrow: hsla(4, 27%, 20%, 0.05);
+        --transparent-shadow: rgba(0, 0, 0, 0.2);
 
         --shadow-block: 4px 4px 0px black;
     }
@@ -78,7 +80,7 @@
 /** SECTION 2 : Common Layouts*/
     
     .default-padding {
-        padding: 1rem 8rem 1rem;
+        padding: 1rem min(8rem, 10%) 1rem;
     }
     
     .default-margin {
@@ -171,7 +173,7 @@
     /* Main issue is aside, especially in sizing 
        Proposal: Add aside to navbar when the screen get sufficiently smaller, and make the image much smaller*/
     .main-aside-container {
-        padding: 2rem 9rem 2rem;
+        padding: 2rem min(9rem, 10%) 2rem;
         /* margin: auto; */ /* To be Reviewed */
         /* max-width: 2000px; */ /* To be Reviewed */
         
@@ -334,12 +336,13 @@
         gap: 4rem;
     }
         .featured-section .featured-column{
-            /* min-width:200px; */ /* To be reviewed */
+            min-width:200px;
             max-width:350px;
         }
         .featured-section .projectsLink, .featured-section .blogsLink{
             display: flex;
             align-items: center;
+
             margin-bottom: 0;
         }
             .featured-section .projectsLink img, .featured-section .blogsLink img {
@@ -394,14 +397,14 @@
             min-width:50%;
             max-width:50%;
 
-            box-shadow: 0px 8px 16px var(--shadow-1); /*Another variant for box shadow?*/
+            box-shadow: var(--box-shadow-6); /*Another variant for box shadow?*/
 
             margin-bottom:0;
             object-fit: cover;
         }
     .featured-content{
-        text-align:left;
         padding: 24px;
+        text-align:left;
     }
         .featured-content h3, .featured-content h4, .featured-content p {
             color: var(--black);
@@ -438,35 +441,34 @@
         margin: 2rem;
         padding-bottom:0;
     }
-        #left-arrow, #right-arrow{
-            z-index:2;
+    #left-arrow, #right-arrow{
+            font-size:32px;
+            font-weight: bold;
+            font: inherit;
+
             cursor: pointer;
-            position: absolute;
-            top: 0;
+            
+            padding: 0;
             height:100%;
             width: 50px;
+            position: absolute;
+            z-index:2;
+            top: 0;
             
-            padding: 16px;
-            font-weight: bold;
-            font-size: 18px;
+            outline: inherit;
+            
             transition: 0.3s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
 
             background: none;
-            color: inherit;
             border: none;
-            padding: 0;
-            font: inherit;
-            cursor: pointer;
-            outline: inherit;
-            font-weight:bold;
+            color: inherit;
             color:var(--transparent-arrow);
-            font-size:32px;
         }
             #left-arrow:hover, #right-arrow:hover{
                 color:hsl(4, 27%, 20%);
-                background-color: rgba(0, 0, 0, 0.2);
+                background-color: var(--transparent-shadow);
                 box-shadow: var(--box-shadow-2);
             }
             #right-arrow{
@@ -474,17 +476,17 @@
                 border-radius: 3px 0 0 3px;
             }
     #projects-section, #blogs-section{
-        margin-top:2rem;
         display:flex;
         flex-wrap: wrap;
+        margin-top:2rem;
         gap:5rem;
     }
     #projects-section h3, #blogs-section h3 {
         color: var(--accent-0);
     }
     #projects-section a, #blogs-section a {
-        color: var(--accent-2);
         text-decoration: underline;
+        color: var(--accent-2);
     }
     #projects-section a:hover, #blogs-section a:hover {
         color: var(--accent-1);
@@ -492,8 +494,8 @@
     #project-genre ul, #blogs-section ul{
         display:flex;
         flex-direction:column;
-        gap:1rem;
         flex-wrap:wrap;
+        gap:1rem;
     }
 
 
@@ -517,16 +519,8 @@
         }
         .techlist-col li {
             background-color: var(--primary-1);
-            border: 1px solid var(--accent-3) ;
+            border: 1px solid var(--accent-3);
             box-shadow: var(--shadow-block);
-            
-            /* display:flex; */
-            /* flex-wrap:wrap; */
-            
-            /* align-items: center; */
-            /* min-width:100px; */
-            /* max-width:150px; */
-            /* height:75px; */
             text-align:center;
         }
         .techlist-col li p {
@@ -551,19 +545,19 @@
         flex-direction:column;
         align-items:center;
     }
-    .picture-section img{
-        width:80%;
-        height:80%;
-    }
-    .picture-section img:hover{
-        width:200%;
-        height:200%;
-        box-shadow: 0px 0px 12px var(--shadow-1);
-    }
-    .picture-section-no-resize img{
-        width:80%;
-        height:80%;
-    }
+        .picture-section img{
+            width:80%;
+            height:80%;
+        }
+        .picture-section img:hover{
+            width:200%;
+            height:200%;
+            box-shadow: 0px 0px 12px var(--shadow-1);
+        }
+        .picture-section-no-resize img{
+            width:80%;
+            height:80%;
+        }
     .date-details p{
         font-size:12px;
         margin:0px;
