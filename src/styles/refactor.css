@@ -244,8 +244,12 @@
         flex-direction:column;
     }
         aside{
-            display:none;
+            align-items: center;
         }
+
+    .small-screen-none {
+        display:none;
+    }
 
     .featured-project img, .featured-blog img, .featured-slide img {
         display:none;
@@ -496,7 +500,7 @@
         .picture-section img:hover{
             width:200%;
             height:200%;
-            box-shadow: 0px 0px 12px var(--shadow-1);
+            box-shadow: var(--box-shadow-3);
         }
         .picture-section-no-resize img{
             width:80%;
