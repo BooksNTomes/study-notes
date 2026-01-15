@@ -17,8 +17,12 @@
     font-size: 16px;
 }
     /* Colors */
+
+    /** Colors Configurations will need a lot of work. We can change themes and the like but 
+    The main issue this time is how the colors relate to the elements */
+
     :root {
-        --primary-1: #fae7d1;
+        --primary-1: #fff4e8;
         
         --secondary-1: #3B2521;
         
@@ -27,8 +31,10 @@
         --accent-2: #bb5d5f;
         --accent-3: #A34445;
         
-        --white: #fcf3e8;
-        --black: #201E1E;
+        --white: #ffe8cd;
+        --black: #1d1a18;
+
+        --black-background: #1a0e0eeb;
         
         --shadow-1: hsla(0, 0%, 0%, 0.20);
         
@@ -123,7 +129,7 @@
 /** SECTION 3 : Specific Layouts */
     /* Body */
     body{
-        background-color: var(--black);
+        background-color: var(--black-background);
         display: flex;
         flex-direction: column;
     }
@@ -181,7 +187,7 @@
             max-width:850px;
         }
             main section {
-                padding:0rem min(9rem, 10%) 1rem;
+                padding:0rem 0rem 1rem;
             }
         /* Aside */
         aside {
