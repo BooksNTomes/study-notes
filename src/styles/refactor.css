@@ -6,7 +6,7 @@
         margin:0;
         padding:0;
 }
-    /* Background Image */                                  /* !! We might want to adjust this */
+    /* Background Image */                                  
     :root {
     background-image: url("../assets/images/background.png");
 }
@@ -22,7 +22,7 @@
     The main issue this time is how the colors relate to the elements */
 
     :root {
-        --primary-1: #fff4e8;
+        --primary-1: #ffe8cd;
         
         --secondary-1: #3B2521;
         
@@ -31,7 +31,7 @@
         --accent-2: #bb5d5f;
         --accent-3: #A34445;
         
-        --white: #ffe8cd;
+        --white: #fff4e8;
         --black: #1d1a18;
 
         --black-background: #1a0e0eeb;
@@ -66,8 +66,8 @@
         font-family: sans-serif;
         text-decoration: none;
         margin: 0rem 0rem 1rem;
-        text-shadow: var(--text-shadow); 
-        color: var(--white);
+        color: var(--primary-1);                    /*All Texts Are on Primary 1 by default: May change*/
+        text-shadow: var(--text-shadow);            /*Text Shadow Setting: Good*/
     }
     p {
         margin: 0rem 0rem 1rem;
@@ -80,7 +80,7 @@
     /** Other Defaults */
     h2 {
         font-size:28px;
-        color: var(--accent-0);
+        color: var(--accent-0); /**/
     }
 /**=========================*/
 /** SECTION 2 : Common Layouts*/
@@ -129,24 +129,18 @@
 /** SECTION 3 : Specific Layouts */
     /* Body */
     body{
-        background-color: var(--black-background);
+        background-color: var(--black-background);      /*Background Color Settings: Good*/
         display: flex;
         flex-direction: column;
     }
     /* Header (Navbar) */
     header {
-        background-color: var(--secondary-1);
-        box-shadow: var(--box-shadow-1);
+        background-color: var(--secondary-1);           /* Secondary-1; Same Color As Footer: May Change */
+        box-shadow: var(--box-shadow-1);                /* First Box-Shadow Setting: Ok - same as footer */
     }
         /** Logo */
-        nav #logo{
-            font-size:28px;
-        }
-        nav #logo:hover {
-            color:var(--primary-1);
-        }
-        nav #logo span {
-            color: var(--accent-0);
+        #logo:hover {
+            color:var(--white);                         /*Same Hover Setting As The Nav Links: May Change */
         }
         /** Nav */
         nav a {
@@ -155,13 +149,12 @@
             font-weight: bold;
         }
         nav a:hover {
-            color:var(--primary-1);
-            text-shadow: var(--text-shadow);
+            color:var(--white);                         /*Change From Primary To White: May Change*/
         }
     /* Footer */
     footer{
-        background-color: var(--secondary-1);
-        box-shadow: var(--box-shadow--1);
+        background-color: var(--secondary-1);           /*Default Dark Color: May Change*/
+        box-shadow: var(--box-shadow--1);               /*First Box Shadow Setting: Ok - same as header*/
         
         left:0;
         bottom: 0;
@@ -202,7 +195,7 @@
                 width: 194px;
                 height: 194px;
 
-                box-shadow: var(--box-shadow-4);
+                box-shadow: var(--box-shadow-4);        /*Fourth Box-Shadow Setting: Will Review*/
             }
             aside .social-links{
                 display:flex;
@@ -219,10 +212,10 @@
 
                 margin-bottom:2rem;
                 
-                color: var(--accent-2)
+                color: var(--accent-2);                 /*Normal Accent: Good;May Change*/
             }
             aside .quick-links a:hover{
-                color: var(--accent-1);
+                color: var(--accent-1);                 /*Lightest Accent: Good;May Change*/
             }
     /* Logos */
     .linkedIn, .github-1, .facebook, .github-2 {
@@ -230,7 +223,7 @@
         height: 48px;
     }
     .github-2 {
-        color: var(--accent-0);
+        color: var(--accent-0);                         /*Normal Accent: Good;May Change*/
     }
 
 /**=========================*/
@@ -315,34 +308,34 @@
             scrollbar-width: none; /* Take note other browser implementations*/
             height:500px;
 
-            border: 8px solid var(--accent-3);
-            box-shadow: var(--box-shadow-4);
-            background-color: var(--white);
+            border: 8px solid var(--accent-3);          /*mid-dark accent: good; may change*/
+            box-shadow: var(--box-shadow-4);            /*Fourth Box Shadow: may change*/
+            background-color: var(--white);             /*White: may change*/
         }
             .featured-section li {
-                background-color: var(--white);
+                background-color: var(--white);         /*White: may change*/
                 padding: 1rem;
                 margin: 0rem 0rem 1rem;
-                box-shadow: var(--box-shadow-5);
+                box-shadow: var(--box-shadow-5);        /*Fifth Box Shadow: may change*/
                 text-align-last:right;
             }
                 .featured-section li:hover {
-                    background-color: var(--primary-1);
+                    background-color: var(--primary-1); /*Inverse of the nav bar hover setting: may change*/
                 }
                 .featured-section li:last-child{
                     margin:0;
                 }
                 .featured-section li h2, .featured-section li p {
-                    text-shadow: var(--text-shadow);
+                    text-shadow: var(--text-shadow);    /*Text Shadow: good*/
                     text-align-last:left;
-                    color: var(--black);
-                    font-size:14px;
+                    color: var(--black);                /*Default Black Text to contrast with the white background: may change*/
+                    font-size:14px; 
                 }
                 .featured-section li h2{
                     font-size:24px;
                 }
 /* projects.html, blogs.html */
-    /* Featured Projects / Blogs */                                 /* !! We might want to adjust this */
+    /* Featured Projects / Blogs */                                 
     .featured-project, .featured-blog, .featured-slide {
         display:flex;
     }
@@ -350,7 +343,7 @@
             min-width:50%;
             max-width:50%;
 
-            box-shadow: var(--box-shadow-6); /*Another variant for box shadow?*/
+            box-shadow: var(--box-shadow-6); /**/
 
             margin-bottom:0;
             object-fit: cover;
@@ -359,10 +352,10 @@
             z-index:2;
             position:relative;
 
-            border:4px solid var(--accent-3);
+            border:4px solid var(--accent-3); /**/
 
-            box-shadow: var(--box-shadow-1);
-            background-color: var(--primary-1);
+            box-shadow: var(--box-shadow-1); /**/
+            background-color: var(--primary-1); /**/
 
             margin: 2rem;
             padding-bottom:0;
@@ -372,7 +365,7 @@
                 text-align:left;
             }
                 .featured-content h3, .featured-content h4, .featured-content p {
-                    color: var(--black);
+                    color: var(--black); /**/
                 }
                 .featured-content h3 {
                     font-size: 28px;
@@ -385,14 +378,14 @@
 
                     font-size:16px;
                     font-weight:bold;
-                    background-color: var(--accent-2);
+                    background-color: var(--accent-2); /**/
 
-                    box-shadow: var(--box-shadow-4);
+                    box-shadow: var(--box-shadow-4); /**/
                 }
                 .featured-content a:hover{
                     transition: 0.3s ease;
 
-                    background-color: var(--accent-1);
+                    background-color: var(--accent-1); /**/
                 }
     
         #left-arrow, #right-arrow{
@@ -418,12 +411,12 @@
             background: none;
             border: none;
             color: inherit;
-            color:var(--transparent-arrow);
+            color:var(--transparent-arrow); /**/
         }
             #left-arrow:hover, #right-arrow:hover{
                 color:hsl(4, 27%, 20%);
-                background-color: var(--transparent-shadow);
-                box-shadow: var(--box-shadow-2);
+                background-color: var(--transparent-shadow); /**/
+                box-shadow: var(--box-shadow-2); /**/
             }
             #right-arrow{
                 right: 0;
@@ -442,22 +435,22 @@
             gap:1rem;
         }
         #projects-section h3, #blogs-section h3 {
-            color: var(--accent-0);
+            color: var(--accent-0); /**/
         }
         #projects-section a, #blogs-section a {
             text-decoration: underline;
-            color: var(--accent-2);
+            color: var(--accent-2); /**/
         }
         #projects-section a:hover, #blogs-section a:hover {
-            color: var(--accent-1);
+            color: var(--accent-1); /**/
         }
 
 
 /* about.html */
     .stack-section{
         padding:1rem;
-        border: 4px solid var(--accent-3);
-        box-shadow: var(--box-shadow-1);
+        border: 4px solid var(--accent-3); /**/
+        box-shadow: var(--box-shadow-1); /**/
     }
     #tech-stack{
         padding: 1rem;
@@ -472,13 +465,13 @@
             gap:1rem;
         }
         .techlist-col li {
-            background-color: var(--primary-1);
-            border: 1px solid var(--accent-3);
-            box-shadow: var(--shadow-block);
+            background-color: var(--primary-1); /**/
+            border: 1px solid var(--accent-3); /**/
+            box-shadow: var(--shadow-block); /**/
             text-align:center;
         }
         .techlist-col li p {
-            color: var(--accent-2);
+            color: var(--accent-2); /**/
             text-align:center;
             text-shadow:none;
             font-weight: bold;
@@ -487,7 +480,7 @@
             padding:5px;
         }
         .techlist-col svg{
-            color:var(--accent-2);
+            color:var(--accent-2); /**/
             width:50px;
             height:50px;
         }
@@ -506,7 +499,7 @@
         .picture-section img:hover{
             width:200%;
             height:200%;
-            box-shadow: var(--box-shadow-3);
+            box-shadow: var(--box-shadow-3); /**/
         }
         .picture-section-no-resize img{
             width:80%;
