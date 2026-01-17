@@ -36,23 +36,23 @@
 
         --black-background: #1a0e0eeb;
         
-        --shadow-1: hsla(0, 0%, 0%, 0.20);
+        --shadow-1: #00000033;
         
     }
     /** Shadow Settings */
     :root {
-        --text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.05);
+        --text-shadow: 2px 2px 2px #0000000d;
         
-        --box-shadow-1: 4px 4px 0px hsla(0, 0%, 0%, 0.20);
-        --box-shadow-2: 0px 0px 4px hsla(0, 0%, 0%, 0.20);
-        --box-shadow-3: 0px 0px 12px hsla(0, 0%, 0%, 0.20);
-        --box-shadow-4: 4px 4px 4px hsla(0, 0%, 0%, 0.20);
-        --box-shadow-5: 0px 0px 16px hsla(0, 0%, 0%, 0.20);
-        --box-shadow-6: 0px 8px 16px hsla(0, 0%, 0%, 0.20);
-        --box-shadow--1: 4px -4px 0px hsla(0, 0%, 0%, 0.20);
+        --box-shadow-1: 4px 4px 0px #00000033;
+        --box-shadow-2: 0px 0px 4px #00000033;
+        --box-shadow-3: 0px 0px 12px #00000033;
+        --box-shadow-4: 4px 4px 4px #00000033;
+        --box-shadow-5: 0px 0px 16px #00000033;
+        --box-shadow-6: 0px 8px 16px #00000033;
+        --box-shadow--1: 4px -4px 0px #00000033;
         
-        --transparent-arrow: hsla(4, 27%, 20%, 0.05);
-        --transparent-shadow: rgba(0, 0, 0, 0.2);
+        --transparent-arrow: #4127250d;
+        --transparent-shadow: #00000033;
 
         --shadow-block: 4px 4px 0px black;
     }
@@ -80,7 +80,7 @@
     /** Other Defaults */
     h2 {
         font-size:28px;
-        color: var(--accent-0); /**/
+        color: var(--accent-0);                     /*H2 styling for headers, still a default*/
     }
 /**=========================*/
 /** SECTION 2 : Common Layouts*/
@@ -378,14 +378,14 @@
 
                     font-size:16px;
                     font-weight:bold;
-                    background-color: var(--accent-2);  /*mid-dark accent: good but may change*/
+                    background-color: var(--accent-3);  /*mid-dark accent: good but may change*/
 
                     box-shadow: var(--box-shadow-4);    /*fourth box shadow: may change*/
                 }
                 .featured-content a:hover{
                     transition: 0.3s ease;
 
-                    background-color: var(--accent-1);  /*link hover, lightest accent: good but may change*/
+                    background-color: var(--accent-2);  /*link hover, lightest accent: good but may change*/
                 }
     
         #left-arrow, #right-arrow{
