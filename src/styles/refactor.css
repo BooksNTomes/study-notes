@@ -21,7 +21,7 @@
     /** Colors Configurations will need a lot of work. We can change themes and the like but 
     The main issue this time is how the colors relate to the elements */
 
-    :root {
+    /* :root {
         --primary-1: #ffe8cd;
         
         --secondary-1: #3B2521;
@@ -32,13 +32,21 @@
         --accent-3: #A34445;
         
         --white: #fff4e8;
-        --black: #1d1a18;
-
+        --black: #1d1a18;  
+    } */
+    :root {
         --black-background: #1a0e0eeb;
         
-        --shadow-1: #00000033;
+        --primary-text: #fff5e9;
+        --primary-light: #f5c997;
+        --primary: #ec8d61;
+        --primary-dark: #e77d57;
         
-    }
+        --secondary-text: #1e1a17;
+        --secondary-light: #bb5d5f;
+        --secondary: #A34445;
+        --secondary-dark: #3B2521;
+        }
     /** Shadow Settings */
     :root {
         --text-shadow: 2px 2px 2px #0000000d;
@@ -53,8 +61,9 @@
         
         --transparent-arrow: #4127250d;
         --transparent-shadow: #00000033;
-
+        
         --shadow-block: 4px 4px 0px black;
+        --shadow-1: #00000033;
     }
     /** Screen Sizing ? */
     :root{
@@ -66,8 +75,8 @@
         font-family: sans-serif;
         text-decoration: none;
         margin: 0rem 0rem 1rem;
-        color: var(--primary-1);                    /*All Texts Are on Primary 1 by default: May change*/
-        text-shadow: var(--text-shadow);            /*Text Shadow Setting: Good*/
+        color: var(--primary-text);
+        text-shadow: var(--text-shadow);
     }
     p {
         margin: 0rem 0rem 1rem;
@@ -80,7 +89,7 @@
     /** Other Defaults */
     h2 {
         font-size:28px;
-        color: var(--accent-0);                     /*H2 styling for headers, still a default*/
+        color: var(--primary);                     /*H2 styling for headers, still a default*/
     }
 /**=========================*/
 /** SECTION 2 : Common Layouts*/
@@ -135,12 +144,12 @@
     }
     /* Header (Navbar) */
     header {
-        background-color: var(--secondary-1);           /* Secondary-1; Same Color As Footer: May Change */
+        background-color: var(--secondary-dark);           /* Secondary-1; Same Color As Footer: May Change */
         box-shadow: var(--box-shadow-1);                /* First Box-Shadow Setting: Ok - same as footer */
     }
         /** Logo */
         #logo:hover {
-            color:var(--white);                         /*Same Hover Setting As The Nav Links: May Change */
+            color:var(--primary-light);                         /*Same Hover Setting As The Nav Links: May Change */
         }
         /** Nav */
         nav a {
@@ -153,7 +162,7 @@
         }
     /* Footer */
     footer{
-        background-color: var(--secondary-1);           /*Default Dark Color: May Change*/
+        background-color: var(--secondary-dark);           /*Default Dark Color: May Change*/
         box-shadow: var(--box-shadow--1);               /*First Box Shadow Setting: Ok - same as header*/
         
         left:0;
