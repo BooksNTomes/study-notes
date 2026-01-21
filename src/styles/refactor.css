@@ -21,29 +21,17 @@
     /** Colors Configurations will need a lot of work. We can change themes and the like but 
     The main issue this time is how the colors relate to the elements */
 
-    /* :root {
-        --primary-1: #ffe8cd;
-        
-        --secondary-1: #3B2521;
-        
-        --accent-0: #ec8e6b;
-        --accent-1: #e77d57;
-        --accent-2: #bb5d5f;
-        --accent-3: #A34445;
-        
-        --white: #fff4e8;
-        --black: #1d1a18;  
-    } */
     :root {
         --black-background: #1a0e0eeb;
         
         --primary-text: #fff5e9;
-        --primary-light: #f5c997;
-        --primary: #ec8d61;
-        --primary-dark: #e77d57;
-        
         --secondary-text: #1e1a17;
-        --secondary-light: #bb5d5f;
+
+        --primary-light: #fedcb5;
+        --primary: #ea926c;
+        --primary-dark: #d06541;                /*note: only used in the featured blog/project button */
+
+        --secondary-light: #bb5d5f;             /*note: unused */
         --secondary: #A34445;
         --secondary-dark: #3B2521;
         }
@@ -62,7 +50,7 @@
         --transparent-arrow: #4127250d;
         --transparent-shadow: #00000033;
         
-        --shadow-block: 4px 4px 0px black;
+        --shadow-block: 4px 4px 0px #000000;
         --shadow-1: #00000033;
     }
     /** Screen Sizing ? */
