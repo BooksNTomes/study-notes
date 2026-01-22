@@ -267,14 +267,24 @@
             height: 24px;
         }
     
+    .article-aside img:hover{
+        width:80%;
+        height:80%;
+    }
 }
 /* Width: 500px | */
 @media all and (width <= 500px){
-    /* To Review */
-    .featured-content a {
-        font-size:14px;
-        width:80%;
-        height:80%;
+    header nav a{
+        font-size: 15px;
+    }
+
+    main{
+        width:90%;
+    }
+
+    .featured-content {
+        padding: 12px;
+        min-width: 250px;
     }
 }
 
@@ -484,21 +494,21 @@
     
 
 /* blogs/article | projects/article . html*/
-    .picture-section {
+    .article-aside {
         display:flex;
         flex-direction:column;
         align-items:center;
     }
-        .picture-section img{
+        .article-aside img{
             width:80%;
             height:80%;
         }
-        .picture-section img:hover{
+        .article-aside img:hover{
             width:200%;
             height:200%;
             box-shadow: var(--box-shadow-3);            /*third box shadow: may change*/
         }
-        .picture-section-no-resize img{
+        .article-aside-no-resize img{
             width:80%;
             height:80%;
         }
