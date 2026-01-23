@@ -29,9 +29,9 @@
 
         --primary-light: #fedcb5;
         --primary: #ea926c;
-        --primary-dark: #d06541;                /*note: only used in the featured blog/project button */
+        --primary-dark: #d06541;                
 
-        --secondary-light: #bb5d5f;             /*note: unused */
+        --secondary-light: #bb5d5f;             
         --secondary: #A34445;
         --secondary-dark: #3B2521;
         }
@@ -209,18 +209,24 @@
 
                 margin-bottom:2rem;
                 
-                color: var(--primary);                       /*changed: Normal Accent: Good;May Change*/
+                color: var(--secondary-light);                       /*changed: Normal Accent: Good;May Change*/
             }
             aside .quick-links a:hover{
-                color: var(--primary-light);                 /*changed: Lightest Accent: Good;May Change*/
+                color: var(--primary);                 /*changed: Lightest Accent: Good;May Change*/
             }
     /* Logos */
     .linkedIn, .github-1, .facebook, .github-2 {
         width: 48px;
         height: 48px;
     }
+    .linkedIn:hover, .github-1:hover, .facebook:hover{
+        color: var(--primary-light);
+    }
     .github-2 {
-        color: var(--primary);                              /*Normal Accent: Good;May Change*/
+        color: var(--secondary-light);                              /*Normal Accent: Good;May Change*/
+    }
+    .github-2:hover{
+        color: var(--primary);
     }
 
 /**=========================*/
@@ -247,9 +253,7 @@
         display:none;
     }
 
-    .featured-project img, .featured-blog img, .featured-slide img {
-        display:none;
-    }
+
 
     .featured-section{
         overflow:scroll;
@@ -270,6 +274,11 @@
     .article-aside img:hover{
         width:80%;
         height:80%;
+    }
+}
+@media all and (width <= 900px){
+    .featured-project img, .featured-blog img, .featured-slide img {
+        display:none;
     }
 }
 /* Width: 500px | */
@@ -446,7 +455,7 @@
         }
         #projects-section a, #blogs-section a {
             text-decoration: underline;
-            color: var(--secondary);                    /*changed: mid-dark accent: good but may change*/
+            color: var(--secondary-light);                    /*changed: mid-dark accent: good but may change*/
         }
         #projects-section a:hover, #blogs-section a:hover {
             color: var(--primary);                      /*changed: lightened accent: good but may change*/
