@@ -503,23 +503,26 @@
     
 
 /* blogs/article | projects/article . html*/
+    .article-links{
+        text-decoration:underline;
+        color:var(--secondary-light);
+    }
+    .article-links:hover{
+        color:var(--primary)
+    }
     .article-aside {
         display:flex;
         flex-direction:column;
-        align-items:center;
+        align-items: center;
     }
         .article-aside img{
-            width:80%;
-            height:80%;
+            width:60%;
+            height:60%;
         }
         .article-aside img:hover{
-            width:200%;
-            height:200%;
-            box-shadow: var(--box-shadow-3);            /*third box shadow: may change*/
-        }
-        .article-aside-no-resize img{
-            width:80%;
-            height:80%;
+            width:100%;
+            height:100%;
+            box-shadow: var(--box-shadow-3);            
         }
     .date-details p{
         font-size:12px;
@@ -528,4 +531,5 @@
     .credits-section a{
         margin-left:1rem;
     }
+    
 
