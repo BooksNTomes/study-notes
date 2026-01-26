@@ -129,6 +129,7 @@
         background-color: var(--black-background);          /*Background Color Settings: Good*/
         display: flex;
         flex-direction: column;
+        min-height: 100dvh;
     }
     /* Header (Navbar) */
     header {
@@ -153,8 +154,7 @@
         background-color: var(--secondary-dark);            /*changed: Default Dark Color: May Change*/
         box-shadow: var(--box-shadow--1);                   /*First Box Shadow Setting: Ok - same as header*/
         
-        left:0;
-        bottom: 0;
+        margin-top: auto;
         z-index:5;
     }
         footer .footer-social-links svg {
@@ -175,6 +175,7 @@
         /* Main */
         main {
             max-width:850px;
+            flex-grow: 1;
         }
             main section {
                 padding:0rem 0rem 1rem;
@@ -510,18 +511,22 @@
     .article-links:hover{
         color:var(--primary)
     }
+    .article {
+        width:50%;
+    }
     .article-aside {
         display:flex;
         flex-direction:column;
         align-items: center;
     }
         .article-aside img{
-            width:60%;
-            height:60%;
+            width:80%;
+            height:80%;
+            text-align:center;
         }
         .article-aside img:hover{
-            width:100%;
-            height:100%;
+            width:120%;
+            height:120%;
             box-shadow: var(--box-shadow-3);            
         }
     .date-details p{
