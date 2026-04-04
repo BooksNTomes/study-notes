@@ -63,7 +63,7 @@
         font-family: sans-serif;
         text-decoration: none;
         margin: 0rem 0rem 1rem;
-        color: var(--primary-text);                     /*changed*/
+        color: var(--primary-text);
         text-shadow: var(--text-shadow);
     }
     p {
@@ -77,7 +77,7 @@
     /** Other Defaults */
     h2 {
         font-size:28px;
-        color: var(--primary);                          /*changed: H2 styling for headers, still a default*/
+        color: var(--primary);
     }
 /**=========================*/
 /** SECTION 2 : Common Layouts*/
@@ -92,6 +92,19 @@
 
     .no-margin {
         margin: 0rem 0rem 0rem;
+    }
+
+    .margin-center {
+        margin: auto;
+    }
+
+    .flex {
+        display: flex
+    }
+    
+    .flex-center {
+        display: flex;
+        align-items: center;
     }
     
     .flex-column {
@@ -126,19 +139,19 @@
 /** SECTION 3 : Specific Layouts */
     /* Body */
     body{
-        background-color: var(--black-background);          /*Background Color Settings: Good*/
+        background-color: var(--black-background);
         display: flex;
         flex-direction: column;
         min-height: 100dvh;
     }
     /* Header (Navbar) */
     header {
-        background-color: var(--secondary-dark);            /*changed: Secondary-1; Same Color As Footer: May Change */
-        box-shadow: var(--box-shadow-1);                    /* First Box-Shadow Setting: Ok - same as footer */
+        background-color: var(--secondary-dark);
+        box-shadow: var(--box-shadow-1);
     }
         /** Logo */
         #logo:hover {
-            color:var(--primary-light);                     /*changed: Same Hover Setting As The Nav Links: May Change */
+            color:var(--primary-light);
         }
         /** Nav */
         nav a {
@@ -147,12 +160,12 @@
             font-weight: bold;
         }
         nav a:hover {
-            color:var(--primary-light);                     /*changed: Change From Primary To White: May Change*/
+            color:var(--primary-light);
         }
     /* Footer */
     footer{
-        background-color: var(--secondary-dark);            /*changed: Default Dark Color: May Change*/
-        box-shadow: var(--box-shadow--1);                   /*First Box Shadow Setting: Ok - same as header*/
+        background-color: var(--secondary-dark);
+        box-shadow: var(--box-shadow--1);
         
         margin-top: auto;
         z-index:5;
@@ -174,7 +187,7 @@
         /* Review This: Look into how main and aside should be sized */
         /* Main */
         main {
-            max-width:850px;
+            max-width: calc(100vw * 2/3);
             flex-grow: 1;
         }
             main section {
@@ -182,6 +195,7 @@
             }
         /* Aside */
         aside {
+            padding: 1rem;
             text-align: center;
         }
             aside #profile{
@@ -193,7 +207,7 @@
                 width: 194px;
                 height: 194px;
 
-                box-shadow: var(--box-shadow-4);        /*Fourth Box-Shadow Setting: Will Review*/
+                box-shadow: var(--box-shadow-4);
             }
             aside .social-links{
                 display:flex;
@@ -210,10 +224,10 @@
 
                 margin-bottom:2rem;
                 
-                color: var(--secondary-light);                       /*changed: Normal Accent: Good;May Change*/
+                color: var(--secondary-light);
             }
             aside .quick-links a:hover{
-                color: var(--primary);                 /*changed: Lightest Accent: Good;May Change*/
+                color: var(--primary);
             }
     /* Logos */
     .linkedIn, .github-1, .facebook, .github-2 {
@@ -224,7 +238,7 @@
         color: var(--primary-light);
     }
     .github-2 {
-        color: var(--secondary-light);                              /*Normal Accent: Good;May Change*/
+        color: var(--secondary-light);
     }
     .github-2:hover{
         color: var(--primary);
@@ -257,27 +271,27 @@
             scrollbar-width: none; /* Take note other browser implementations*/
             height:500px;
 
-            border: 8px solid var(--secondary);                 /*changed: darkest accent: good; may change*/
-            box-shadow: var(--box-shadow-4);                    /*Fourth Box Shadow: may change*/
-            background-color: var(--primary-text);              /*changed: White: may change*/
+            border: 8px solid var(--secondary);
+            box-shadow: var(--box-shadow-4);
+            background-color: var(--primary-text);
         }
             .featured-section li {
-                background-color: var(--primary-text);          /*changed: White: may change*/
+                background-color: var(--primary-text);
                 padding: 1rem;
                 margin: 0rem 0rem 1rem;
-                box-shadow: var(--box-shadow-5);                /*Fifth Box Shadow: may change*/
+                box-shadow: var(--box-shadow-5);
                 text-align-last:right;
             }
                 .featured-section li:hover {
-                    background-color: var(--primary-light);     /*changed: Inverse of the nav bar hover setting: may change*/
+                    background-color: var(--primary-light);
                 }
                 .featured-section li:last-child{
                     margin:0;
                 }
                 .featured-section li h2, .featured-section li p {
-                    text-shadow: var(--text-shadow);            /*Text Shadow: good*/
+                    text-shadow: var(--text-shadow);
                     text-align-last:left;
-                    color: var(--secondary-text);               /*changed: Default Black Text to contrast with the white background: may change*/
+                    color: var(--secondary-text);
                     font-size:14px; 
                 }
                 .featured-section li h2{
@@ -292,21 +306,23 @@
             min-width:50%;
             max-width:50%;
 
-            box-shadow: var(--box-shadow-6);                    /*6th Box Shadow: May Change*/
+            box-shadow: var(--box-shadow-6);
 
             margin-bottom:0;
             object-fit: cover;
         }
         #featured-blogs-hero, #featured-projects-hero{
+            max-width: calc(100vw * 2/4);
             z-index:2;
             position:relative;
 
-            border:4px solid var(--secondary);                   /*darkest accent: good but may change*/
+            border:4px solid var(--secondary);
 
-            box-shadow: var(--box-shadow-1);                    /*first box shadow: may change*/
-            background-color: var(--primary-text);                 /*primary color: may change*/
+            box-shadow: var(--box-shadow-1);
+            background-color: var(--primary-text);
 
             margin: 2rem;
+            margin-left: 0rem;
             padding-bottom:0;
         }
             .featured-content{
@@ -314,7 +330,7 @@
                 text-align:left;
             }
                 .featured-content h3, .featured-content h4, .featured-content p {
-                    color: var(--secondary-text);                /*black color: good but may change*/
+                    color: var(--secondary-text);
                 }
                 .featured-content h3 {
                     font-size: 28px;
@@ -327,14 +343,14 @@
 
                     font-size:16px;
                     font-weight:bold;
-                    background-color: var(--primary-dark);  /*mid-dark accent: good but may change*/
+                    background-color: var(--primary-dark);
 
-                    box-shadow: var(--box-shadow-4);    /*fourth box shadow: may change*/
+                    box-shadow: var(--box-shadow-4);
                 }
                 .featured-content a:hover{
                     transition: 0.3s ease;
 
-                    background-color: var(--secondary);  /*link hover, lightest accent: good but may change*/
+                    background-color: var(--secondary);
                 }
     
         #left-arrow, #right-arrow{
@@ -360,12 +376,12 @@
             background: none;
             border: none;
             color: inherit;
-            color:var(--transparent-arrow);             /*specialized for the arrows specifically: good but may change*/
+            color:var(--transparent-arrow);
         }
             #left-arrow:hover, #right-arrow:hover{
                 color:hsl(4, 27%, 20%);
-                background-color: var(--transparent-shadow); /*specialized for the arrow specifically: good but may change*/
-                box-shadow: var(--box-shadow-2);        /*2nd box shadow: may change*/
+                background-color: var(--transparent-shadow);
+                box-shadow: var(--box-shadow-2);
             }
             #right-arrow{
                 right: 0;
@@ -384,22 +400,23 @@
             gap:1rem;
         }
         #projects-section h3, #blogs-section h3 {
-            color: var(--primary);                      /*changed: lightest accent: good but may change*/
+            color: var(--primary);
         }
         #projects-section a, #blogs-section a {
             text-decoration: underline;
-            color: var(--secondary-light);                    /*changed: mid-dark accent: good but may change*/
+            color: var(--secondary-light);
         }
         #projects-section a:hover, #blogs-section a:hover {
-            color: var(--primary);                      /*changed: lightened accent: good but may change*/
+            color: var(--primary);
         }
 
 
 /* about.html */
     .stack-section{
         padding:1rem;
-        border: 4px solid var(--secondary);              /*darkest accent for border: good but may change*/
-        box-shadow: var(--box-shadow-1);                /*first box shadow: may change*/
+        max-width: calc(100vw * 1/3);
+        border: 4px solid var(--secondary);
+        box-shadow: var(--box-shadow-1);
     }
     #tech-stack{
         padding: 1rem;
@@ -414,13 +431,13 @@
             gap:1rem;
         }
         .techlist-col li {
-            background-color: var(--primary-text);         /*background color for stack section logos: may change*/
-            border: 2px solid var(--secondary);          /*darkest accent for border: good but may change*/
-            box-shadow: var(--shadow-block);            /*shadow block: ok*/
+            background-color: var(--primary-text);
+            border: 2px solid var(--secondary);
+            box-shadow: var(--shadow-block);
             text-align:center;
         }
         .techlist-col li p {
-            color: var(--secondary);                     /*mid-dark accent for text: good but may change*/
+            color: var(--secondary);
             text-align:center;
             text-shadow:none;
             font-weight: bold;
@@ -429,7 +446,7 @@
             padding:5px;
         }
         .techlist-col svg{
-            color:var(--secondary);                      /*mid dark accent for logo: good but may change*/
+            color:var(--secondary);
             width:50px;
             height:50px;
         }
