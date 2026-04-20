@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="icon" type="image/x-icon" href="undefined">
-        <title>"Playlist Generator"</title>
+        <title>"Passcrypt-Safe Rework"</title>
         <link rel="stylesheet" href="../../styles/styles.css">
         <script src="../../scripts/script.js" defer></script>
     </head>
@@ -31,25 +31,33 @@
         <div class="main-aside-container flex-space limit-justify">
             <main class = "default-margin-left">
 				<div>
-					<h2>Playlist Generator</h2>
-					<p>This project was made as part of the Summer School on Industrial AI at VIVES International School for Applied Sciences. I worked on this project with a relatively small team, and I was given the task to work on some of the python code, particularly aspects related to using the Spotify API and the OpenAI API. It was a novel experience as I've never used those before.</p>
-					<p>It was also fun trying to debug and study how I could extract data from the Spotify API.</p>
-					<p>Available as a Github repository for those who are interested to make their own picture->playlist app</p>
+					<h2>Passcrypt-Safe Rework</h2>
+					<p>Passcrypt-Safe Rework is a simplified, cmd redo of my old project. Meant for personal use in an offline environment rather than through the web. It utilizes SQLite, Python, and encryption algorithms such as bcrypt and as well as hash functions. It is operated through a command line interface. And will undergo improvements as I work on it. The public repo is meant for public viewing and learning purposes. It is not meant to replace your password managers, but it may help as a foundation for some devs to build their own local password managers with unique methodologies and security measures.</p>
+					<p>Why Rework The Original Project? It is primarily because the original project was too messy, even when it does have a technically working user interface. I also found it insecure as its data is stored in a simple textfile (which, though encrypted, is not as secure)</p>
 					<h2>Features</h2>
+					<p>Currently, the project is functional, but some things are not patched for now such as removing debug logs/prints.</p>
 					<ul>
-						<li><p>- Takes in a picture, preferrably of you wearing a t-shirt.</p></li>
-						<li><p>- Takes into consideration the weather.</p></li>
-						<li><p>- Prompts an LLM to generate a spotify playlist for you.</p></li>
+						<li><p>- Basic user authentication</p></li>
+						<li><p>- Password storage and encryption</p></li>
+						<li><p>- Textfile encryption using Keys</p></li>
+					</ul>
+					<h2>Installation</h2>
+					<ul>
+						<li><p>1. Simply download the code at the GitHub Repository, and assuming that you have Python3 installed, you can simply execute the main file.</p></li>
 					</ul>
 					<h2>Credits</h2>
-					<p>My groupmates, wont mention names for privacy reasons, but they're all cool!</p>
+					<p>Here are mostly broad credits as I mostly looked at either documentations or resources for crosschecking</p>
+					<ul>
+						<li><p>DuckDuckGo AI (mostly as a test/experiment, needed crosschecking)</p></li>
+						<li><p>https://sqlite.org/docs.html"</p></li>
+					</ul>
 				</ul>
             </main>
                         
             <aside class="side-info default-margin-right">
                 <div class="article-aside">
 					<h2>Related Links</h2>
-					<a class="quick-links" href="https://github.com/VIVES-project/playlist-gen">Github Repository</a>
+					<a class="quick-links" href="https://github.com/CasualCodes/passcrypt-safe-rework">Github Repository</a>
 
                 </div>
             </aside>

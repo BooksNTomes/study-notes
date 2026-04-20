@@ -135,6 +135,26 @@
         gap:2rem;
     }
 
+    .limit-center{
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .text-center{
+        text-align: center;
+        margin:auto;
+    }
+
+    .limit-justify{
+        max-width: 1600px;
+        margin: 0rem auto 0rem;
+    }
+
+    .full {
+        width: 100%;
+    }
+
+
 /**=========================*/
 /** SECTION 3 : Specific Layouts */
     /* Body */
@@ -183,12 +203,12 @@
        Proposal: Add aside to navbar when the screen get sufficiently smaller, and make the image much smaller*/
     .main-aside-container {
         padding: 2rem min(9rem, 10%) 2rem;
+        gap:1rem;
     }
         /* Review This: Look into how main and aside should be sized */
         /* Main */
         main {
-            max-width: calc(100vw * 2/3);
-            flex-grow: 1;
+            min-width: calc(100vw * 2/6);
         }
             main section {
                 padding:0rem 0rem 1rem;
@@ -227,6 +247,16 @@
                 color: var(--secondary-light);
             }
             aside .quick-links a:hover{
+                color: var(--primary);
+            }
+            .quick-links{
+                text-decoration:underline;
+
+                margin-bottom:2rem;
+                
+                color: var(--secondary-light);
+            }
+            .quick-links:hover{
                 color: var(--primary);
             }
     /* Logos */

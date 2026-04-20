@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="icon" type="image/x-icon" href="undefined">
-        <title>"Playlist Generator"</title>
+        <title>"On Random Numbers"</title>
         <link rel="stylesheet" href="../../styles/styles.css">
         <script src="../../scripts/script.js" defer></script>
     </head>
@@ -31,25 +31,20 @@
         <div class="main-aside-container flex-space limit-justify">
             <main class = "default-margin-left">
 				<div>
-					<h2>Playlist Generator</h2>
-					<p>This project was made as part of the Summer School on Industrial AI at VIVES International School for Applied Sciences. I worked on this project with a relatively small team, and I was given the task to work on some of the python code, particularly aspects related to using the Spotify API and the OpenAI API. It was a novel experience as I've never used those before.</p>
-					<p>It was also fun trying to debug and study how I could extract data from the Spotify API.</p>
-					<p>Available as a Github repository for those who are interested to make their own picture->playlist app</p>
-					<h2>Features</h2>
-					<ul>
-						<li><p>- Takes in a picture, preferrably of you wearing a t-shirt.</p></li>
-						<li><p>- Takes into consideration the weather.</p></li>
-						<li><p>- Prompts an LLM to generate a spotify playlist for you.</p></li>
-					</ul>
-					<h2>Credits</h2>
-					<p>My groupmates, wont mention names for privacy reasons, but they're all cool!</p>
-				</ul>
+					<h2>On Random Numbers</h2>
+					<p>Date Posted: 08-26-2025</p>
+					<p>Creating random number generators tends to be my go-to hello world program when trying to learn something new in terms of frameworks or languages, such as when I made an FFV random jobpicker at android studio during senior highschool, or when I made a random number generator at Laravel as my initial warmup before the OJT project began. It wont be my permanent go-to, but it tends to be my go-to, even now in learning react and node.js. Maybe I'll warmup in C# too by making a random number generator...</p>
+
+					<p>It's because random numbers are quite interesting, they allow randomized behavior in programs, and especially games. Sure it is not true random, but it is random enough to make things varied in terms of behavior. But in these sorts of generators, I can see that it can be decomposed to the following elements: the List containing all of the elements to be picked, the actual Algorithm responsible for picking the elements, and a Configuration that limits either the list scope or the algorithm's scope of picking.</p>
+
+					<p>A good example would be the classic random number generator of integers. The List is the integers themselves, the Algorithm is whatever algorithm is used, and an example of a Configuration is a min value of 0 and a max value of 100, so that the algorithm is restricted to picking only from 0 to 100. In a random name generator, given that there is a predefined name list, a configuration would be what names are included or excluded to the list. This small realization intrigued me.</p>
+
+					<p>With that in mind, I am currently developing a random number generator site using react and node.js, and I want to add a twist. But I want to save that for when I actually implement it right. There's a lot to learn from implementing an API, a database, and a frontend with the help of tailwind css. As someone whose more currently comfortable with vanilla HTML and CSS, using something different like react, and having proper backend with node.js is going to be an interesting ride.</p>
+				</div>
             </main>
                         
             <aside class="side-info default-margin-right">
                 <div class="article-aside">
-					<h2>Related Links</h2>
-					<a class="quick-links" href="https://github.com/VIVES-project/playlist-gen">Github Repository</a>
 
                 </div>
             </aside>
