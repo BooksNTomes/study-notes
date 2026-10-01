@@ -562,14 +562,38 @@
         display:none;
     }
 }
+@media all and (width <= 710px){
+    .header-container{
+        flex-direction: column;
+    }
+}
+
 /* Width: 500px | */
-@media all and (width <= 500px){
+@media all and (width <= 600px){
+
     header nav a{
         font-size: 15px;
     }
 
+    .header-container{
+        flex-direction: column;
+    }
+
     main{
-        width:90%;
+        width:auto;
+    }
+    
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main-aside-container{
+        min-width: 0px;
+    }
+
+    .featured-section{
+        flex-direction: column;
     }
 
     .featured-content {
