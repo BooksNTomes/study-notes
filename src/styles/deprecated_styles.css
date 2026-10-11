@@ -4,14 +4,14 @@
     margin:0;
     padding:0;
 }
-/* Background Image */
+/* Background Image */                                  /* !! We might want to adjust this */
 :root {
-    background-image: url("../site-images/background.png");
+    font-size: 20px;
+    background-image: url("../assets/images/background.png");
 }
-/* Colors : use var(--name)*/
+/* Colors : use var(--name)*/                           /* !! We might want to adjust this */
 /* Original */
-:root {
-
+/* :root {
     --default-white: hsl(44, 100%, 96%);
     --alternate-white: hsl(31, 100%, 91%);
 
@@ -35,12 +35,40 @@
 
     --docsize-default: 1000px;
     --docsize-dynamic: 100%;
+} */
+
+/* Experiment */
+:root {
+    --default-white: #fae7d1;
+    --alternate-white: #fcf3e8;
+    
+    --default-black: #3B2521;
+    --header-footer-dark: #3B2521;
+    --visible-arrow: #3B2521;
+    
+    --link-hover-bright: #e77d57;
+    --sect-header-bright: #ec8e6b;
+    
+    --border-dark: #A34445;
+    --link-emphasis: #bb5d5f;
+    --link-hover-dark: #7e3536;
+ 
+    --shadow-text: hsla(0, 0%, 0%, 0.05);
+    --shadow-box: hsla(0, 0%, 0%, 0.20);
+    --shadow-block: black;
+    --transparent-arrow: hsla(4, 27%, 20%, 0.05);
+    --overlay: #201E1E;
+
+    --docsize-default: 1000px;
+    --docsize-dynamic: 100%;
 }
 
 /* Body */
 body{
     min-height:100dvh;
     background-color: var(--overlay);
+    display: flex;
+    flex-direction: column;
 }
 /* Texts */
 h1, h2, h3, h4, h5, h6, p, a, img {
@@ -120,12 +148,11 @@ nav a:hover {
     text-shadow: var(--shadow-text);
 }
 /*--------------------------------------------------*/
-/* Footer */
+/* Footer */                                            /* !! We found a solution to the footer problem */
 footer{
     background-color: var(--header-footer-dark);
     box-shadow: 0px -4px 4px var(--shadow-box);
     width:100%;
-    position:fixed;
     left:0;
     bottom: 0;
     z-index:5;
@@ -143,12 +170,13 @@ footer ul{
     flex-wrap: wrap;
 }
 /*--------------------------------------------------*/
-/* Main-Aside */
+/* Main-Aside */                                        /* !! There has to be a better way to handle the Aside */
 .main-aside-container{
     padding-top:3rem;
     padding-bottom:3rem;
     width:var(--docsize-default);
     margin:auto;
+    flex-grow: 1;
     display:flex;
     gap:5rem;
     justify-content: space-between;
@@ -254,7 +282,7 @@ aside h2{
 .quick-links a:hover{
     color: var(--link-hover-bright);
 }
-/* Featured Projects / Blogs */
+/* Featured Projects / Blogs */                                 /* !! We might want to adjust this */
 .featured-project, .featured-blog, .featured-slide {
     /* padding:16px; */
     display:flex;
@@ -445,7 +473,7 @@ aside h2{
     margin-left:1rem;
 }
 
-/* Dynamic */
+/* Dynamic */                                                       /* !! We might want to adjust this */
 @media all and (width <= 1000px){
     header{
         padding-bottom: 1rem;
